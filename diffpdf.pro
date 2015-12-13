@@ -81,3 +81,14 @@ exists($(HOME)/opt/poppler024/) {
 #	INCLUDEPATH += /usr/local/include/podofo
 #    }
 #}
+
+
+#QMAKE_CXXFLAGS +=-Werror
+#QMAKE_CXXFLAGS +=-Wall
+DESTDIR = build
+OBJECTS_DIR = build/obj
+MOC_DIR = build/moc
+UI_DIR = build/ui
+UI_HEADERS_DIR = buildui/include
+UI_SOURCES_DIR = buildui/src
+RCC_DIR = build/rcc
