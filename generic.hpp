@@ -11,11 +11,11 @@
     FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
     for more details.
 */
-//#if QT_VERSION >= 0x050000
-//    #include <poppler-qt5.h>
-//#else
+#if defined(USE_QT5)
+   #include <poppler-qt5.h>
+#else
     #include <poppler-qt4.h>
-//#endif
+#endif
 #include <QMetaType>
 #include <QPair>
 #include <QPixmap>
@@ -93,7 +93,7 @@ const TextBoxList getTextBoxes(PdfPage page, const QRectF &rect=QRect());
 
 const QString strippedFilename(const QString &filename);
 const QStringList droppedFilenames(const QMimeData *mimeData);
-const QRect resizeRect(const QRect &pageRect, const QSize &pixmapSize);
+const QRectF resizeRect(const QRectF &pageRect, const QSize &pixmapSize);
 
 /* // Not needed
 const int roundedToNearest(const int x, const int multiple)

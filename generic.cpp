@@ -190,7 +190,7 @@ const QStringList droppedFilenames(const QMimeData *mimeData)
 
 // Returns a copy of pageRect reduced if necessary to have the same
 // aspect ratio as pixmapSize.
-const QRect resizeRect(const QRect &pageRect, const QSize &pixmapSize)
+const QRectF resizeRect(const QRectF &pageRect, const QSize &pixmapSize)
 {
     double ratio = pixmapSize.width() /
             static_cast<double>(pixmapSize.height());
@@ -200,7 +200,7 @@ const QRect resizeRect(const QRect &pageRect, const QSize &pixmapSize)
         width = pageRect.width();
         height = width / ratio;
     }
-    QRect rect(pageRect);
+    QRectF rect(pageRect);
     rect.setWidth(width);
     rect.setHeight(height);
     return rect;

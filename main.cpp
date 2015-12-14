@@ -32,8 +32,9 @@ int main(int argc, char *argv[])
     app.setOrganizationDomain("qtrac.eu");
     app.setApplicationName("DiffPDF");
     app.setWindowIcon(QIcon(":/icon.png"));
+#if !defined(USE_QT5)
     QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
-
+#endif
     QTextStream out(stdout);
     QStringList args = app.arguments().mid(1);
     QSettings settings;

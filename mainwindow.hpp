@@ -19,7 +19,11 @@
 #else
 #include <tr1/memory>
 #endif
-#include <poppler-qt4.h>
+#if defined(USE_QT5)
+   #include <poppler-qt5.h>
+#else
+    #include <poppler-qt4.h>
+#endif
 #include <QBrush>
 #include <QList>
 #include <QMainWindow>
@@ -131,8 +135,8 @@ private:
             const PdfDocument &pdf2, const QString &header);
     bool paintSaveAs(QPainter *painter, const int index,
             const PdfDocument &pdf1, const PdfDocument &pdf2,
-            const QString &header, const QRect &rect,
-            const QRect &leftRect, const QRect &rightRect);
+            const QString &header, const QRectF &rect,
+            const QRectF &leftRect, const QRectF &rightRect);
     void saveAsImages(const int start, const int end,
             const PdfDocument &pdf1, const PdfDocument &pdf2,
             const QString &header);
@@ -160,8 +164,8 @@ private:
             const QString &key2);
     bool paintSaveAsBatch(QPainter *painter, CompareResults &results, const int index,
             const PdfDocument &pdf1, const PdfDocument &pdf2,
-            const QString &header, const QRect &rect, const QRect &leftRect,
-            const QRect &rightRect);
+            const QString &header, const QRect &rect, const QRectF &leftRect,
+            const QRectF &rightRect);
 
 
     QPushButton *setFile1Button;

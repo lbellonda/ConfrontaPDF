@@ -15,6 +15,7 @@
 #include <QDragEnterEvent>
 #include <QDragEnterEvent>
 #include <QMouseEvent>
+#include <QMimeData>
 
 Label::Label(QWidget *parent) : QLabel(parent)
 {

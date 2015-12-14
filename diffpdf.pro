@@ -40,35 +40,107 @@ TRANSLATIONS += diffpdf_de.ts
 TRANSLATIONS += diffpdf_es.ts
 CODECFORTR    = UTF-8
 
-greaterThan(QT_MAJOR_VERSION, 4) {
-    QT       += printsupport widgets core
-}
-
-LIBS	     += -lpoppler-qt4
 win32 {
     CONFIG += release
 }
-exists($(HOME)/opt/poppler024/) {
-    message(Using locally built Poppler library)
-    INCLUDEPATH += $(HOME)/opt/poppler024/include/poppler/cpp
-    INCLUDEPATH += $(HOME)/opt/poppler024/include/poppler/qt4
-    LIBS += -Wl,-rpath -Wl,$(HOME)/opt/poppler024/lib -L$(HOME)/opt/poppler024/lib
-} else {
-    exists(/poppler_lib) {
-	message(Using locally built Poppler library on Windows)
-	INCLUDEPATH += /c/poppler_lib/include/poppler/cpp
-	INCLUDEPATH += /c/poppler_lib/include/poppler/qt4
-	LIBS += -Wl,-rpath -Wl,/c/poppler_lib/bin -Wl,-L/c/poppler_lib/bin
+
+greaterThan(QT_MAJOR_VERSION, 4) {
+    QT       += printsupport widgets core
+    LIBS	     += -lpoppler-qt5
+    DEFINES += USE_QT5
+    exists($(HOME)/opt/poppler024/) {
+        message(Using locally built Poppler library)
+        INCLUDEPATH += $(HOME)/opt/poppler024/include/poppler/cpp
+        INCLUDEPATH += $(HOME)/opt/poppler024/include/poppler/qt5
+        LIBS += -Wl,-rpath -Wl,$(HOME)/opt/poppler024/lib -L$(HOME)/opt/poppler024/lib
     } else {
-	exists(/usr/include/poppler/qt4) {
-	    INCLUDEPATH += /usr/include/poppler/cpp
-	    INCLUDEPATH += /usr/include/poppler/qt4
-	} else {
-	    INCLUDEPATH += /usr/local/include/poppler/cpp
-	    INCLUDEPATH += /usr/local/include/poppler/qt4
-	}
+        exists(/poppler_lib) {
+            message(Using locally built Poppler library on Windows)
+            INCLUDEPATH += /c/poppler_lib/include/poppler/cpp
+            INCLUDEPATH += /c/poppler_lib/include/poppler/qt5
+            LIBS += -Wl,-rpath -Wl,/c/poppler_lib/bin -Wl,-L/c/poppler_lib/bin
+        } else {
+            exists(/usr/include/poppler/qt4) {
+                INCLUDEPATH += /usr/include/poppler/cpp
+                INCLUDEPATH += /usr/include/poppler/qt5
+            } else {
+                exists(../../../poppler-win/poppler/include) {
+                    message(Using locally built Poppler library on ../../poppler-win/include)
+                    INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/cpp
+                    INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/qt5
+                    LIBS += -Wl,-rpath -Wl,../../../poppler-win/poppler/bin -Wl,-L../../../poppler-win/bin
+                } else {
+                    message(Using default)
+                    INCLUDEPATH += /usr/local/include/poppler/cpp
+                    INCLUDEPATH += /usr/local/include/poppler/qt5
+                }
+            }
+        }
+    }
+} else {
+    LIBS	     += -lpoppler-qt4
+    exists($(HOME)/opt/poppler024/) {
+        message(Using locally built Poppler library)
+        INCLUDEPATH += $(HOME)/opt/poppler024/include/poppler/cpp
+        INCLUDEPATH += $(HOME)/opt/poppler024/include/poppler/qt4
+        LIBS += -Wl,-rpath -Wl,$(HOME)/opt/poppler024/lib -L$(HOME)/opt/poppler024/lib
+    } else {
+        exists(/poppler_lib) {
+            message(Using locally built Poppler library on Windows)
+            INCLUDEPATH += /c/poppler_lib/include/poppler/cpp
+            INCLUDEPATH += /c/poppler_lib/include/poppler/qt4
+            LIBS += -Wl,-rpath -Wl,/c/poppler_lib/bin -Wl,-L/c/poppler_lib/bin
+        } else {
+            exists(/usr/include/poppler/qt4) {
+                INCLUDEPATH += /usr/include/poppler/cpp
+                INCLUDEPATH += /usr/include/poppler/qt4
+            } else {
+                exists(../../../poppler-win/poppler/include) {
+                    message(Using locally built Poppler library on ../../poppler-win/include)
+                    INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/cpp
+                    INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/qt4
+                    LIBS += -Wl,-rpath -Wl,../../../poppler-win/poppler/bin -Wl,-L../../../poppler-win/bin
+                } else {
+                    message(Using default)
+                    INCLUDEPATH += /usr/local/include/poppler/cpp
+                    INCLUDEPATH += /usr/local/include/poppler/qt4
+                }
+            }
+        }
     }
 }
+
+
+
+#exists($(HOME)/opt/poppler024/) {
+#    message(Using locally built Poppler library)
+#    INCLUDEPATH += $(HOME)/opt/poppler024/include/poppler/cpp
+#    INCLUDEPATH += $(HOME)/opt/poppler024/include/poppler/qt4
+#    LIBS += -Wl,-rpath -Wl,$(HOME)/opt/poppler024/lib -L$(HOME)/opt/poppler024/lib
+#} else {
+#    exists(/poppler_lib) {
+#	message(Using locally built Poppler library on Windows)
+#	INCLUDEPATH += /c/poppler_lib/include/poppler/cpp
+#	INCLUDEPATH += /c/poppler_lib/include/poppler/qt4
+#	LIBS += -Wl,-rpath -Wl,/c/poppler_lib/bin -Wl,-L/c/poppler_lib/bin
+#    } else {
+#	exists(/usr/include/poppler/qt4) {
+#	    INCLUDEPATH += /usr/include/poppler/cpp
+#	    INCLUDEPATH += /usr/include/poppler/qt4
+#	} else {
+#           exists(../../../poppler-win/poppler/include) {
+#                message(Using locally built Poppler library on ../../poppler-win/include)
+#                INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/cpp
+#                INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/qt5
+#                LIBS += -Wl,-rpath -Wl,../../../poppler-win/poppler/bin -Wl,-L../../../poppler-win/bin
+#            } else {
+#                message(Using default)
+#                INCLUDEPATH += /usr/local/include/poppler/cpp
+#                INCLUDEPATH += /usr/local/include/poppler/qt4
+#            }
+#	}
+#    }
+#}
 #exists($(HOME)/opt/podofo09/) {
 #    message(Using locally built PoDoFo library)
 #    INCLUDEPATH += $(HOME)/opt/podofo09/include/poppler/cpp
@@ -83,8 +155,10 @@ exists($(HOME)/opt/poppler024/) {
 #}
 
 
-#QMAKE_CXXFLAGS +=-Werror
-#QMAKE_CXXFLAGS +=-Wall
+QMAKE_CXXFLAGS +=-Werror
+QMAKE_CXXFLAGS +=-Wall
+
+
 DESTDIR = build
 OBJECTS_DIR = build/obj
 MOC_DIR = build/moc
@@ -92,3 +166,4 @@ UI_DIR = build/ui
 UI_HEADERS_DIR = buildui/include
 UI_SOURCES_DIR = buildui/src
 RCC_DIR = build/rcc
+

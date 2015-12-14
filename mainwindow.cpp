@@ -1721,8 +1721,8 @@ void MainWindow::saveAsPdf( const int start, const int end,
 
 bool MainWindow::paintSaveAs(QPainter *painter, const int index,
         const PdfDocument &pdf1, const PdfDocument &pdf2,
-        const QString &header, const QRect &rect, const QRect &leftRect,
-        const QRect &rightRect)
+        const QString &header, const QRectF &rect, const QRectF &leftRect,
+        const QRectF &rightRect)
 {
     PagePair pair = viewDiffComboBox->itemData(index)
         .value<PagePair>();
@@ -1741,17 +1741,17 @@ bool MainWindow::paintSaveAs(QPainter *painter, const int index,
     painter->drawText(rect, header, QTextOption(Qt::AlignHCenter|
                                                 Qt::AlignTop));
     if (savePages == SaveBothPages) {
-        QRect rect = resizeRect(leftRect, pixmaps.first.size());
-        painter->drawPixmap(rect, pixmaps.first);
+        QRectF rect = resizeRect(leftRect, pixmaps.first.size());
+        painter->drawPixmap(rect.toAlignedRect(), pixmaps.first);
         rect = resizeRect(rightRect, pixmaps.second.size());
-        painter->drawPixmap(rect, pixmaps.second);
+        painter->drawPixmap(rect.toAlignedRect(), pixmaps.second);
         painter->drawRect(rightRect.adjusted(2.5, 2.5, 2.5, 2.5));
     } else if (savePages == SaveLeftPages) {
-        QRect rect = resizeRect(leftRect, pixmaps.first.size());
-        painter->drawPixmap(rect, pixmaps.first);
+        QRectF rect = resizeRect(leftRect, pixmaps.first.size());
+        painter->drawPixmap(rect.toAlignedRect(), pixmaps.first);
     } else { // (savePages == SaveRightPages)
-        QRect rect = resizeRect(leftRect, pixmaps.second.size());
-        painter->drawPixmap(rect, pixmaps.second);
+        QRectF rect = resizeRect(leftRect, pixmaps.second.size());
+        painter->drawPixmap(rect.toAlignedRect(), pixmaps.second);
     }
     painter->drawRect(leftRect.adjusted(2.5, 2.5, 2.5, 2.5));
     return true;
@@ -2068,8 +2068,8 @@ void MainWindow::saveAsPdfBatch(Status *status, CompareResults &results,
 
 bool MainWindow::paintSaveAsBatch(QPainter *painter, CompareResults &results, const int index,
         const PdfDocument &pdf1, const PdfDocument &pdf2,
-        const QString &header, const QRect &rect, const QRect &leftRect,
-        const QRect &rightRect)
+        const QString &header, const QRect &rect, const QRectF &leftRect,
+        const QRectF &rightRect)
 {
     PagePair pair = results.differences().at(index);
     if (pair.isNull())
@@ -2088,17 +2088,17 @@ bool MainWindow::paintSaveAsBatch(QPainter *painter, CompareResults &results, co
         painter->drawText(rect, header, QTextOption(Qt::AlignHCenter| Qt::AlignTop));
     }
     if (savePages == SaveBothPages) {
-        QRect rect = resizeRect(leftRect, pixmaps.first.size());
-        painter->drawPixmap(rect, pixmaps.first);
+        QRectF rect = resizeRect(leftRect, pixmaps.first.size());
+        painter->drawPixmap(rect.toAlignedRect(), pixmaps.first);
         rect = resizeRect(rightRect, pixmaps.second.size());
-        painter->drawPixmap(rect, pixmaps.second);
+        painter->drawPixmap(rect.toAlignedRect(), pixmaps.second);
         painter->drawRect(rightRect.adjusted(2.5, 2.5, 2.5, 2.5));
     } else if (savePages == SaveLeftPages) {
-        QRect rect = resizeRect(leftRect, pixmaps.first.size());
-        painter->drawPixmap(rect, pixmaps.first);
+        QRectF rect = resizeRect(leftRect, pixmaps.first.size());
+        painter->drawPixmap(rect.toAlignedRect(), pixmaps.first);
     } else { // (savePages == SaveRightPages)
-        QRect rect = resizeRect(leftRect, pixmaps.second.size());
-        painter->drawPixmap(rect, pixmaps.second);
+        QRectF rect = resizeRect(leftRect, pixmaps.second.size());
+        painter->drawPixmap(rect.toAlignedRect(), pixmaps.second);
     }
     painter->drawRect(leftRect.adjusted(2.5, 2.5, 2.5, 2.5));
     return true;
