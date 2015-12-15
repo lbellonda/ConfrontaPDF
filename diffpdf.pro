@@ -64,13 +64,13 @@ greaterThan(QT_MAJOR_VERSION, 4) {
                 INCLUDEPATH += /usr/include/poppler/cpp
                 INCLUDEPATH += /usr/include/poppler/qt5
             } else {
-                exists(../../../poppler-win/poppler/include) {
-                    message(Using locally built Poppler library on ../../poppler-win/include)
-                    INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/cpp
-                    INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/qt5
-                    LIBS += -Wl,-rpath -Wl,../../../poppler-win/poppler/bin -Wl,-L../../../poppler-win/bin
+                exists(../poppler-win/poppler/include) {
+                    message(Using locally built Poppler 5 library on ../poppler-win/poppler/include)
+                    INCLUDEPATH += ../poppler-win/poppler/include/poppler/cpp
+                    INCLUDEPATH += ../poppler-win/poppler/include/poppler/qt5
+                    LIBS += -Wl,-rpath -Wl,../poppler-win/poppler/lib -Wl,-L../poppler-win/poppler/lib
                 } else {
-                    message(Using default)
+                    message(Using default 5)
                     INCLUDEPATH += /usr/local/include/poppler/cpp
                     INCLUDEPATH += /usr/local/include/poppler/qt5
                 }
@@ -95,13 +95,13 @@ greaterThan(QT_MAJOR_VERSION, 4) {
                 INCLUDEPATH += /usr/include/poppler/cpp
                 INCLUDEPATH += /usr/include/poppler/qt4
             } else {
-                exists(../../../poppler-win/poppler/include) {
-                    message(Using locally built Poppler library on ../../poppler-win/include)
-                    INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/cpp
-                    INCLUDEPATH += ../../../poppler-win/poppler/include/poppler/qt4
-                    LIBS += -Wl,-rpath -Wl,../../../poppler-win/poppler/bin -Wl,-L../../../poppler-win/bin
+                exists(../poppler-win/poppler/include) {
+                    message(Using locally built Poppler 4 library on ../poppler-win/include)
+                    INCLUDEPATH += ../poppler-win/poppler/include/poppler/cpp
+                    INCLUDEPATH += ../poppler-win/poppler/include/poppler/qt4
+                    LIBS += -Wl,-rpath -Wl,../poppler-win/poppler/lib -Wl,-L../poppler-win/poppler/lib
                 } else {
-                    message(Using default)
+                    message(Using default 4)
                     INCLUDEPATH += /usr/local/include/poppler/cpp
                     INCLUDEPATH += /usr/local/include/poppler/qt4
                 }
