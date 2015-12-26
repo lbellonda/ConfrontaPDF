@@ -20,7 +20,7 @@
 #include <QTextBrowser>
 
 
-static const QString Version("2.1.3c");
+const QString AboutForm::Version("2.1.3c");
 
 
 AboutForm::AboutForm(QWidget *parent) : QDialog(parent)
@@ -40,6 +40,7 @@ AboutForm::AboutForm(QWidget *parent) : QDialog(parent)
     "</table><hr>"
     "<p>This program compares the text or the visual appearance of "
     "each page in two PDF files."
+    "<p>This version can be used in batch operations."
     "<hr><p>If you like %1 you might like my books:<ul>"
     "<li><a href=\"http://www.qtrac.eu/gobook.html\">"
     "Programming in Go</a></li>"

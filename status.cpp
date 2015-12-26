@@ -13,6 +13,7 @@
 
 #include "status.h"
 #include "batchcompare.h"
+#include "aboutform.hpp"
 #include <QTextStream>
 #include <QFile>
 #include <QDateTime>
@@ -182,6 +183,7 @@ int Status::returnOp(const EReturnType retType, StartupParameters *params, Batch
             stream.writeStartElement("run");
             qint64 msecs = params->startTime().msecsTo(now);
             stream.writeAttribute("durationInSec", QString::number((((double)msecs)/1000.0)));
+            stream.writeAttribute("swVersion", AboutForm::Version);
             stream.writeEndElement(); // run
 
             if( NULL != compare ) {

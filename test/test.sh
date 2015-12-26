@@ -1,7 +1,7 @@
 #!/bin/sh
 #test for diffpdf, start in project dir
-export diffcmd=../build/diffpdf
-export datadir=../diffpdf/data
+export diffcmd=./build/diffpdf
+export datadir=./data
 
 #equals short code (default)
 var=`$diffcmd -b $datadir/doca1pag.pdf $datadir/doca1pag_dup.pdf`
@@ -143,5 +143,15 @@ if [ -s $tf ]
  else
     echo
 fi
+
+#do a test run
+tf=`mktemp`
+tr=`mktemp`
+var=`$diffcmd -b --pdfdiff=$tf $datadir/doca1pag.pdf $datadir/docb1pag.pdf --xmlResult=$tr --key=abcd`
+if [ "$var" != "1" ]; then
+ echo "****failed 12.3: $var"
+ exit 1
+fi
+echo Result is in $tr
 
 exit 0
