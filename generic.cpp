@@ -171,19 +171,14 @@ const QString strippedFilename(const QString &filename)
     return filename_.trimmed();
 }
 
-
 const QStringList droppedFilenames(const QMimeData *mimeData)
 {
     QStringList filenames;
-    QString text = mimeData->text();
-    if (!text.isEmpty()) {
-        filenames = text.split("\n");
-        for (int i = 0; i < filenames.count(); ++i)
-            filenames[i] = strippedFilename(filenames.at(i));
-    }
-    else {
-        foreach (const QUrl &url, mimeData->urls())
-            filenames << strippedFilename(url.toString());
+    if(mimeData->hasUrls()) {
+        foreach(QUrl url, mimeData->urls()) {
+            QString filePath = url.toLocalFile();
+            filenames.append(filePath);;
+        }
     }
     return filenames;
 }

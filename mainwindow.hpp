@@ -31,6 +31,7 @@
 #include "startupparameters.h"
 #include "status.h"
 #include "compareresults.h"
+#include "batchcompare.h"
 
 class AboutForm;
 class HelpForm;
@@ -50,7 +51,7 @@ class QSpinBox;
 class QSplitter;
 
 
-class MainWindow : public QMainWindow
+class MainWindow : public QMainWindow, CompareNotifier
 {
     Q_OBJECT
 
@@ -60,10 +61,18 @@ public:
             const QString &filename1, const QString &filename2,
             const QString &language, StartupParameters *startupParameters,
             Status *status, QWidget *parent=0);
-    void batchOperation();
+    void setOverrideCursor();
+    void setRestoreCursor();
+    void processEvents();
+    void setStatusLabel(const QString &text);
+    void messageBox(const QString &text);
+
 protected:
     void closeEvent(QCloseEvent *event);
     bool eventFilter(QObject *object, QEvent *event);
+    QString finalFileName(const QString &filename);
+    DocInfo *docInfo(PdfDocument pdf, const QString &fileName);
+    //void initCompareParams(BatchCompare &compare);
 
 private slots:
     void setFile1(QString filename=QString());
@@ -144,29 +153,6 @@ private:
             int *width, int *height);
     QRectF pointRectForMargins(const QSize &size);
     QRect pixelRectForMargins(const QSize &size);
-
-    // batch operations
-    QList<int> getPageListBatch( const int which, PdfDocument pdf, const int startPageSet);
-    void comparePagesBatch(
-            Status *status,
-            CompareResults &results,
-            const QString &filename1, const PdfDocument &pdf1,
-            const QString &filename2, const PdfDocument &pdf2);
-    void saveResultsBatch(Status *status, CompareResults &results, const PdfDocument &pdf1, const PdfDocument &pdf2);
-    void saveAsPdfBatch(Status *status, CompareResults &results, const QString &outputFile, const int start, const int end,
-            const PdfDocument &pdf1, const PdfDocument &pdf2,
-            const QString &header);
-    const QPair<QString, QString> cacheKeysBatch(const int index, const PagePair &pair) const;
-    const QPair<QPixmap, QPixmap> populatePixmapsBatch(
-            const PdfDocument &pdf1, const PdfPage &page1,
-            const PdfDocument &pdf2, const PdfPage &page2,
-            bool hasVisualDifference, const QString &key1,
-            const QString &key2);
-    bool paintSaveAsBatch(QPainter *painter, CompareResults &results, const int index,
-            const PdfDocument &pdf1, const PdfDocument &pdf2,
-            const QString &header, const QRect &rect, const QRectF &leftRect,
-            const QRectF &rightRect);
-
 
     QPushButton *setFile1Button;
     LineEdit *filename1LineEdit;

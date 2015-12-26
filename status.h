@@ -14,7 +14,9 @@
 #ifndef STATUS_H
 #define STATUS_H
 
+#include "docinfo.h"
 #include "startupparameters.h"
+#include <QXmlStreamWriter>
 
 enum EError {
     ENoErrors = 0,
@@ -25,6 +27,8 @@ enum EError {
     ErrorUnableToLoadFile2=-4,
     ErrorLoadingPage=-5,
     ErrorWritingPDFDiffFile=-6,
+    ErrorWritingXMLResultFile=-7,
+    ErrorUnableToLoadFile=-8,
     //
     ErrorDocDiffer=1,
     ErrorPagesDiffer=2,
@@ -35,16 +39,20 @@ enum EError {
 
 enum EReturnType;
 
+class BatchCompare ;
+
 class Status
 {
     EError _status;
     QString _description;
     QString _paramInError;
+    DocInfo *_doc1Info;
+    DocInfo *_doc2Info;
 public:
     Status();
     ~Status();
 
-    int returnOp(const EReturnType retType);
+    int returnOp(const EReturnType retType, StartupParameters *params, BatchCompare *compare = NULL);
     void setParamError(const bool error, const QString &paramName);
 
     EError status() const;
@@ -54,6 +62,13 @@ public:
 
     bool isError();
     bool isErrorComparing();
+    DocInfo *doc1Info() const;
+    void setDoc1Info(DocInfo *doc1Info);
+    DocInfo *doc2Info() const;
+    void setDoc2Info(DocInfo *doc2Info);
+
+    private:
+    void writeInfo(QXmlStreamWriter &writer, DocInfo *info);
 };
 
 #endif // STATUS_H

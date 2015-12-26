@@ -4,16 +4,23 @@
 # help.html
 # diffpdf.1
 #DEFINES	     += DEBUG
+
 HEADERS	     += mainwindow.hpp \
     startupparameters.h \
     utils.h \
     status.h \
-    compareresults.h
+    compareresults.h \
+    docinfo.h \
+    batchcompare.h \
+    commandlinemanager.h
 SOURCES      += mainwindow.cpp \
     startupparameters.cpp \
     utils.cpp \
     status.cpp \
-    compareresults.cpp
+    compareresults.cpp \
+    docinfo.cpp \
+    batchcompare.cpp \
+    commandlinemanager.cpp
 HEADERS	     += textitem.hpp
 SOURCES	     += textitem.cpp
 HEADERS	     += aboutform.hpp
@@ -39,10 +46,6 @@ TRANSLATIONS += diffpdf_fr.ts
 TRANSLATIONS += diffpdf_de.ts
 TRANSLATIONS += diffpdf_es.ts
 CODECFORTR    = UTF-8
-
-win32 {
-    CONFIG += release
-}
 
 greaterThan(QT_MAJOR_VERSION, 4) {
     QT       += printsupport widgets core
@@ -167,3 +170,8 @@ UI_HEADERS_DIR = buildui/include
 UI_SOURCES_DIR = buildui/src
 RCC_DIR = build/rcc
 
+
+
+CONFIG   += console
+# this is questionable for command line app on macos
+#CONFIG   -= app_bundle

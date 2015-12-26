@@ -44,7 +44,7 @@
 #include <QSettings>
 #include <QSpinBox>
 #include <QSplitter>
-
+#include <QUrl>
 
 MainWindow::MainWindow(const Debug debug,
         const InitialComparisonMode comparisonMode,
@@ -1155,13 +1155,17 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event)
     return QMainWindow::eventFilter(object, event);
 }
 
+QString MainWindow::finalFileName(const QString &filename)
+{
+    return filename;
+}
 
 void MainWindow::setFiles1(const QStringList &filenames)
 {
     if (filenames.count() && !filenames.at(0).isEmpty()) {
-        setFile1(filenames.at(0));
+        setFile1(finalFileName(filenames.at(0)));
         if (filenames.count() > 1 && !filenames.at(1).isEmpty())
-            setFile2(filenames.at(1));
+            setFile2(finalFileName(filenames.at(1)));
     }
 }
 
@@ -1169,9 +1173,9 @@ void MainWindow::setFiles1(const QStringList &filenames)
 void MainWindow::setFiles2(const QStringList &filenames)
 {
     if (filenames.count() && !filenames.at(0).isEmpty()) {
-        setFile2(filenames.at(0));
+        setFile2(finalFileName(filenames.at(0)));
         if (filenames.count() > 1 && !filenames.at(1).isEmpty())
-            setFile1(filenames.at(1));
+            setFile1(finalFileName(filenames.at(1)));
     }
 }
 
@@ -1263,7 +1267,6 @@ PdfDocument MainWindow::getPdf(const QString &filename)
     }
     return pdf;
 }
-
 
 int MainWindow::writeFileInfo(const QString &filename)
 {
@@ -1914,273 +1917,54 @@ void MainWindow::setAMargin(const QPoint &pos)
     }
 }
 
-
-void MainWindow::batchOperation()
+void MainWindow::setOverrideCursor()
 {
-    setEnabled(false);
-    PdfDocument pdf1 = getPdf(_startupParameters->file1());
-    if (!pdf1) {
-        _status->setStatus(ErrorUnableToLoadFile1);
-        return;
-    }
-    PdfDocument pdf2 = getPdf(_startupParameters->file2());
-    if (!pdf2) {
-        _status->setStatus(ErrorUnableToLoadFile2);
-        return;
-    }
-
-    QTime time;
-    time.start();
-    CompareResults results;
-    comparePagesBatch( _status, results,
-                       _startupParameters->file1(), pdf1,
-                      _startupParameters->file2(), pdf2);
-    if( _status->isError() && _status->isErrorComparing() ) {
-        if( _startupParameters->enablePDFDiff() ) {
-            saveResultsBatch(_status, results, pdf1, pdf2 ) ;
-        }
-    }
-    setEnabled(true);
+    QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
 }
 
-
-QList<int> MainWindow::getPageListBatch( const int which, PdfDocument pdf, const int startPageSet)
+void MainWindow::setRestoreCursor()
 {
-    // Poppler has 0-based page numbers; the UI has 1-based page numbers
-    QList<int> pages;
-
-    int startPage = startPageSet-1;
-    if( startPage >= pdf->numPages() ) {
-        _status->setStatusWithDescription(ErrorInitialPage, tr("file: %1, start page greater than available pages").arg(which) );
-        return pages ;
-    }
-    int count = _startupParameters->pages();
-    if( count == StartupParameters::AllPages ) {
-        count = pdf->numPages() - startPage ;
-    }
-    if( (startPage + count ) > pdf->numPages()) {
-        _status->setStatusWithDescription(ErrorFinalPage, tr("file: %1, final page is not existing").arg(which) );
-        return pages ;
-    }
-    // 0 -based pages
-    for( int index = 0 ; index < count ; index ++ ) {
-        pages.append(startPage + index );
-    }
-    return pages;
+    QApplication::restoreOverrideCursor();
 }
 
-void MainWindow::comparePagesBatch(
-        Status *status,
-        CompareResults &results,
-        const QString &filename1, const PdfDocument &pdf1,
-        const QString &filename2, const PdfDocument &pdf2)
+void MainWindow::processEvents()
 {
-    QList<int> pages1 = getPageListBatch(1, pdf1, _startupParameters->startPage1() );
-    if( _status->isError() ) {
-        return ;
-    }
-    QList<int> pages2 = getPageListBatch(2, pdf2,  _startupParameters->startPage1() );
-    if( _status->isError() ) {
-        return ;
-    }
-    // check for the same number of pages
-    if( pages1.count() != pages2.count() ) {
-        _status->setStatusWithDescription( ErrorPagesDiffer, tr("the number of pages is not the same on both the documents, doc1:%1, doc2:%2").arg(pages1.count()).arg(pages2.count()));
-    }
-    currentCompareIndex = _startupParameters->comparisonMode();
-    results.setTotal(qMin(pages1.count(), pages2.count()));
-    while (!pages1.isEmpty() && !pages2.isEmpty()) {
-        int p1 = pages1.takeFirst();
-        PdfPage page1(pdf1->page(p1));
-        if (!page1) {
-            _status->setStatusWithDescription( ErrorLoadingPage, tr("Failed to read page %1 from '%2'.").arg(p1 + 1).arg(filename1));
-            continue;
-        }
-        int p2 = pages2.takeFirst();
-        PdfPage page2(pdf2->page(p2));
-        if (!page2) {
-            _status->setStatusWithDescription( ErrorLoadingPage, tr("Failed to read page %1 from '%2'.").arg(p2 + 1).arg(filename2));
-            continue;
-        }
-        Difference difference = getTheDifference(page1, page2);
-        if (difference != NoDifference) {
-            results.differences().append(PagePair(p1, p2, difference == VisualDifference));
-            results.incCount();
-            status->setStatusWithDescription( ErrorDocDiffer, tr("documents differ at page: %1").arg(p1+1));
-        }
-    }
+    QApplication::processEvents();
 }
 
-void MainWindow::saveResultsBatch(Status *status, CompareResults &results, const PdfDocument &pdf1, const PdfDocument &pdf2)
+void MainWindow::setStatusLabel(const QString &text)
 {
-    int start = 0;
-    int end = results.count();
-    QString header;
-    const QChar bullet(0x2022);
-    header = tr("DiffPDF %1 %2 vs. %3 %1 %4").arg(bullet)
-        .arg(_startupParameters->file1()).arg(_startupParameters->file2())
-        .arg(QDate::currentDate().toString(Qt::ISODate));
-    saveAsPdfBatch( status, results, _startupParameters->pdfDiffFilePath(), start, end, pdf1, pdf2, header);
+    statusLabel->setText(text);
 }
 
-void MainWindow::saveAsPdfBatch(Status *status, CompareResults &results,
-        const QString &outputFile, const int start, const int end,
-        const PdfDocument &pdf1, const PdfDocument &pdf2,
-        const QString &header)
+void MainWindow::messageBox(const QString &text)
 {
-    QPrinter printer(QPrinter::HighResolution);
-    printer.setOutputFileName(outputFile);
-    printer.setOutputFormat(QPrinter::PdfFormat);
-    printer.setColorMode(QPrinter::Color);
-    printer.setCreator(tr("DiffPDF"));
-    printer.setOrientation(savePages == SaveBothPages
-            ? QPrinter::Landscape : QPrinter::Portrait);
-    QPainter painter(&printer);
-    painter.setRenderHints(QPainter::Antialiasing|
-            QPainter::TextAntialiasing|QPainter::SmoothPixmapTransform);
-    painter.setFont(QFont("Helvetica", 11));
-    painter.setPen(Qt::darkCyan);
-    const QRect rect(0, 0, painter.viewport().width(),
-                        painter.fontMetrics().height());
-    const int y = painter.fontMetrics().lineSpacing();
-    const int height = painter.viewport().height() - y;
-    const int gap = 30;
-    int width = (painter.viewport().width() / 2) - gap;
-    if (savePages != SaveBothPages) {
-        width = painter.viewport().width();
-    }
-    const QRect leftRect(0, y, width, height);
-    const QRect rightRect(width + gap, y, width, height);
-    for (int index = start; index < end; ++index) {
-        if (!paintSaveAsBatch(&painter, results, index, pdf1, pdf2, header, rect,
-                    leftRect, rightRect)) {
-            status->setStatusWithDescriptionUncond(ErrorWritingPDFDiffFile, tr("error while writing differences file"));
-            continue;
-        }
-        if (index + 1 < end)
-            printer.newPage();
-    }
-    if( printer.printerState() == QPrinter::Error ) {
-        status->setStatusWithDescriptionUncond(ErrorWritingPDFDiffFile, tr("error while writing differences file"));
-    }
+    QMessageBox::warning(this, tr("DiffPDF — Error"), text );
 }
 
-
-bool MainWindow::paintSaveAsBatch(QPainter *painter, CompareResults &results, const int index,
-        const PdfDocument &pdf1, const PdfDocument &pdf2,
-        const QString &header, const QRect &rect, const QRectF &leftRect,
-        const QRectF &rightRect)
+/*
+void MainWindow::initCompareParams(BatchCompare &compare)
 {
-    PagePair pair = results.differences().at(index);
-    if (pair.isNull())
-        return false;
-    PdfPage page1(pdf1->page(pair.left));
-    if (!page1)
-        return false;
-    PdfPage page2(pdf2->page(pair.right));
-    if (!page2)
-        return false;
-    const QPair<QString, QString> keys = cacheKeys(index, pair);
-    const QPair<QPixmap, QPixmap> pixmaps = populatePixmaps(pdf1,
-            page1, pdf2, page2, pair.hasVisualDifference,
-            keys.first, keys.second);
-    if(!header.isEmpty()) {
-        painter->drawText(rect, header, QTextOption(Qt::AlignHCenter| Qt::AlignTop));
-    }
-    if (savePages == SaveBothPages) {
-        QRectF rect = resizeRect(leftRect, pixmaps.first.size());
-        painter->drawPixmap(rect.toAlignedRect(), pixmaps.first);
-        rect = resizeRect(rightRect, pixmaps.second.size());
-        painter->drawPixmap(rect.toAlignedRect(), pixmaps.second);
-        painter->drawRect(rightRect.adjusted(2.5, 2.5, 2.5, 2.5));
-    } else if (savePages == SaveLeftPages) {
-        QRectF rect = resizeRect(leftRect, pixmaps.first.size());
-        painter->drawPixmap(rect.toAlignedRect(), pixmaps.first);
-    } else { // (savePages == SaveRightPages)
-        QRectF rect = resizeRect(leftRect, pixmaps.second.size());
-        painter->drawPixmap(rect.toAlignedRect(), pixmaps.second);
-    }
-    painter->drawRect(leftRect.adjusted(2.5, 2.5, 2.5, 2.5));
-    return true;
+    compare.currentCompareIndex = compareComboBox->currentIndex();
+    compare.pages1LineEdit = pages1LineEdit->text();
+    compare.pages2LineEdit = pages2LineEdit->text();
+
+    compare.columnsSpinBoxValue = columnsSpinBox->value() ;
+    compare.toleranceRSpinBoxValue = toleranceRSpinBox->value();
+    compare.toleranceYSpinBoxValue = toleranceYSpinBox->value();
+
+    compare.marginsGroupBoxChecked = marginsGroupBox->isChecked();
+    compare.topMarginSpinBoxValue = topMarginSpinBox->value();
+    compare.bottomMarginSpinBoxValue = bottomMarginSpinBox->value();
+    compare.leftMarginSpinBoxValue = leftMarginSpinBox->value();
+    compare.rightMarginSpinBoxValue  = rightMarginSpinBox->value();
+    compare.zoomSpinBoxValue = zoomSpinBox->value();
+    compare.filename1 = filename1LineEdit->text();
+    compare.filename2= filename2LineEdit->text();
+    compare.zoningGroupBoxChecked = zoningGroupBox->isChecked() ;
+    compare.compositionMode =
+            static_cast<QPainter::CompositionMode>(
+                showComboBox->itemData(showComboBox->currentIndex()).toInt());
 }
 
-const QPair<QPixmap, QPixmap> MainWindow::populatePixmapsBatch(
-        const PdfDocument &pdf1, const PdfPage &page1,
-        const PdfDocument &pdf2, const PdfPage &page2,
-        bool hasVisualDifference, const QString &key1,
-        const QString &key2)
-{
-    QPixmap pixmap1;
-    QPixmap pixmap2;
-#if QT_VERSION >= 0x040600
-    if (!QPixmapCache::find(key1, &pixmap1) ||
-        !QPixmapCache::find(key2, &pixmap2)) {
-#else
-    if (!QPixmapCache::find(key1, pixmap1) ||
-        !QPixmapCache::find(key2, pixmap2)) {
-#endif
-        const int DPI = static_cast<int>(POINTS_PER_INCH *
-                (zoomSpinBox->value() / 100.0));
-        const bool compareText = _startupParameters->comparisonMode() != CompareAppearance;
-        QImage plainImage1;
-        QImage plainImage2;
-        if (hasVisualDifference || !compareText) {
-            plainImage1 = page1->renderToImage(DPI, DPI);
-            plainImage2 = page2->renderToImage(DPI, DPI);
-        }
-        pdf1->setRenderHint(Poppler::Document::Antialiasing);
-        pdf1->setRenderHint(Poppler::Document::TextAntialiasing);
-        pdf2->setRenderHint(Poppler::Document::Antialiasing);
-        pdf2->setRenderHint(Poppler::Document::TextAntialiasing);
-        QImage image1 = page1->renderToImage(DPI, DPI);
-        QImage image2 = page2->renderToImage(DPI, DPI);
-
-        if (compareText || showComboBox->currentIndex() == 0) {
-            QPainterPath highlighted1;
-            QPainterPath highlighted2;
-            if (hasVisualDifference || !compareText)
-                computeVisualHighlights(&highlighted1, &highlighted2,
-                        plainImage1, plainImage2);
-            else
-                computeTextHighlights(&highlighted1, &highlighted2, page1,
-                        page2, DPI);
-            if (!highlighted1.isEmpty())
-                paintOnImage(highlighted1, &image1);
-            if (!highlighted2.isEmpty())
-                paintOnImage(highlighted2, &image2);
-            if (highlighted1.isEmpty() && highlighted2.isEmpty()) {
-                QFont font("Helvetica", 14);
-                font.setOverline(true);
-                font.setUnderline(true);
-                highlighted1.addText(DPI / 4, DPI / 4, font,
-                    tr("DiffPDF: False Positive"));
-                paintOnImage(highlighted1, &image1);
-            }
-            pixmap1 = QPixmap::fromImage(image1);
-            pixmap2 = QPixmap::fromImage(image2);
-        } else {
-            pixmap1 = QPixmap::fromImage(image1);
-            QImage composed(image1.size(), image1.format());
-            QPainter painter(&composed);
-            painter.setCompositionMode(QPainter::CompositionMode_Source);
-            painter.fillRect(composed.rect(), Qt::transparent);
-            painter.setCompositionMode(
-                    QPainter::CompositionMode_SourceOver);
-            painter.drawImage(0, 0, image1);
-            painter.setCompositionMode(
-                    static_cast<QPainter::CompositionMode>(
-                        showComboBox->itemData(
-                            showComboBox->currentIndex()).toInt()));
-            painter.drawImage(0, 0, image2);
-            painter.setCompositionMode(
-                    QPainter::CompositionMode_DestinationOver);
-            painter.fillRect(composed.rect(), Qt::white);
-            painter.end();
-            pixmap2 = QPixmap::fromImage(composed);
-        }
-        QPixmapCache::insert(key1, pixmap1);
-        QPixmapCache::insert(key2, pixmap2);
-    }
-    return qMakePair(pixmap1, pixmap2);
-}
-
+*/

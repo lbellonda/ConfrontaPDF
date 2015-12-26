@@ -19,7 +19,8 @@
 #include <QTextCodec>
 #include <QTextStream>
 #include <QTranslator>
-
+#include "batchcompare.h"
+#include "commandlinemanager.h"
 
 int main(int argc, char *argv[])
 {
@@ -95,6 +96,9 @@ int main(int argc, char *argv[])
                 "--startPage1=nn the stating page number for file 1\n"
                 "--startPage2=nn the stating page number for file 2\n"
                 "--pdfdiff=path generates a pdf with differences \n"
+                "--xmlResult=path generates file with the comparison result in XML \n"
+                "--key=aKey a key to be recorded in the result file\n"
+                "--settings=file settings to override default parameters\n"
                 "\nRun the program without the --help option and click "
                 "About to see copyright and license details\n"
                 ;
@@ -134,7 +138,7 @@ int main(int argc, char *argv[])
     if( errors.count() > 0 ) {
         if( startupParameters.isBatch() ) {
             status.setParamError( true, errors.first());
-            return status.returnOp(startupParameters.returnType());
+            return status.returnOp(startupParameters.returnType(), &startupParameters);
         } else {
             foreach( QString str, errors ) {
                 out << QObject::tr("unrecognized argument '") << str << "'\n";
@@ -146,20 +150,21 @@ int main(int argc, char *argv[])
     }
     startupParameters.setComparisonMode(comparisonMode);
     if( status.isError() ) {
-        return status.returnOp(startupParameters.returnType());
+        return status.returnOp(startupParameters.returnType(), &startupParameters);
     }
-    if( !startupParameters.validate(&status) ) {
-        return status.returnOp(startupParameters.returnType());
-    }
-
-    MainWindow window(debug, comparisonMode, filename1, filename2,
-            language.left(2), &startupParameters, &status ); // We want de not de_DE etc.
-    if( startupParameters.isBatch() ) {
-        window.batchOperation();
-    } else {
+    if(!startupParameters.isBatch()) {
+        MainWindow window(debug, comparisonMode, filename1, filename2,
+                language.left(2), &startupParameters, &status ); // We want de not de_DE etc.
         window.show();
         app.exec();
+    } else {
+        if( !startupParameters.validate(&status) ) {
+            return status.returnOp(startupParameters.returnType(), &startupParameters);
+        }
+        CommandLineManager manager(debug, comparisonMode, filename1, filename2,
+                &startupParameters, &status );
+        manager.batchOperation();
+        return status.returnOp(startupParameters.returnType(), &startupParameters, manager.getCompare() );
     }
-    return status.returnOp(startupParameters.returnType());
+    return 0;
 }
-

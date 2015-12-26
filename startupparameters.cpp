@@ -16,6 +16,7 @@
 
 StartupParameters::StartupParameters()
 {
+    _startTime = QDateTime::currentDateTime();
     _pages = AllPages ;
     _startPage1 = 1 ;
     _startPage2 = 1 ;
@@ -23,20 +24,23 @@ StartupParameters::StartupParameters()
     _returnType = ReturnOnlyCode ;
     _enablePDFDiff = false ;
     _pdfDiffAllPages = false ;
+    _useXmlResult = false;
 }
 
 StartupParameters::~StartupParameters()
 {
 }
 
-static const QString BatchExtended = "--batch" ;
-static const QString Batch = "-b" ;
+const QString StartupParameters::BatchExtended = "--batch" ;
+const QString StartupParameters::Batch = "-b" ;
 static const QString OutType = "--outType=" ;
 static const QString Pages = "--pages=" ;
 static const QString StartPage1 = "--startPage1=";
 static const QString StartPage2 = "--startPage2=";
 static const QString PDFDiffPath = "--pdfdiff=";
-
+static const QString XMLResultFile = "--xmlResult=";
+static const QString Key = "--key=";
+static const QString SettingsFile = "--settings=";
 
 bool StartupParameters::parseArgument(const QString &arg, Status *status)
 {
@@ -68,7 +72,26 @@ bool StartupParameters::parseArgument(const QString &arg, Status *status)
         _pdfDiffFilePath = arg.mid(PDFDiffPath.length());
         if(!_pdfDiffFilePath.isEmpty() ) {
             _enablePDFDiff = true ;
+        } else {
+          error = true ;
         }
+        status->setParamError(error, PDFDiffPath);
+    } else if( arg.startsWith(XMLResultFile)) {
+        _xmlResultFile = arg.mid(XMLResultFile.length());
+        if(!_xmlResultFile.isEmpty() ) {
+            _useXmlResult = true ;
+        } else {
+            error = true ;
+        }
+        status->setParamError(error, XMLResultFile);
+    } else if( arg.startsWith(Key)) {
+        _key = arg.mid(Key.length());
+    } else if( arg.startsWith(SettingsFile)) {
+        _settingsFile = arg.mid(SettingsFile.length());
+        if(_settingsFile.isEmpty() ) {
+            error = true ;
+        }
+        status->setParamError(error, SettingsFile);
     } else {
         return false;
     }
@@ -193,4 +216,39 @@ InitialComparisonMode StartupParameters::comparisonMode() const
 void StartupParameters::setComparisonMode(const InitialComparisonMode &comparisonMode)
 {
     _comparisonMode = comparisonMode;
+}
+
+bool StartupParameters::useXMLResultFile() const
+{
+    return _useXmlResult;
+}
+
+QString StartupParameters::XMLResultFilePath() const
+{
+    return _xmlResultFile;
+}
+
+QString StartupParameters::key() const
+{
+    return _key;
+}
+
+QDateTime StartupParameters::startTime() const
+{
+    return _startTime;
+}
+
+void StartupParameters::setStartTime(const QDateTime &startTime)
+{
+    _startTime = startTime;
+}
+
+QString StartupParameters::settingsFile() const
+{
+    return _settingsFile;
+}
+
+void StartupParameters::setSettingsFile(const QString &settingsFile)
+{
+    _settingsFile = settingsFile;
 }

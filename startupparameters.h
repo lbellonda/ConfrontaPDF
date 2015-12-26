@@ -26,6 +26,7 @@ enum EReturnType {
 
 class StartupParameters
 {
+    QDateTime _startTime;
     int _pages;
     int _startPage1;
     int _startPage2;
@@ -37,9 +38,16 @@ class StartupParameters
     QString _file1;
     QString _file2;
     InitialComparisonMode _comparisonMode;
+    QString _xmlResultFile;
+    bool _useXmlResult;
+    QString _key;
+    QString _settingsFile;
 public:
     StartupParameters();
     ~StartupParameters();
+
+    static const QString BatchExtended ;
+    static const QString Batch;
 
     bool parseArgument(const QString &arg, Status *status);
     bool validate(Status *status);
@@ -68,6 +76,13 @@ public:
     void setPdfDiffFilePath(const QString &pdfDiffFilePath);
     InitialComparisonMode comparisonMode() const;
     void setComparisonMode(const InitialComparisonMode &comparisonMode);
+    bool useXMLResultFile() const;
+    QString XMLResultFilePath() const;
+    QString key() const;
+    QDateTime startTime() const;
+    void setStartTime(const QDateTime &startTime);
+    QString settingsFile() const;
+    void setSettingsFile(const QString &settingsFile);
 };
 
 #endif // STARTUPPARAMETERS_H

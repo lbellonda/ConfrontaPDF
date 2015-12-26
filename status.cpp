@@ -12,15 +12,22 @@
 
 
 #include "status.h"
+#include "batchcompare.h"
 #include <QTextStream>
+#include <QFile>
+#include <QDateTime>
 
 Status::Status()
 {
     _status = ENoErrors ;
+    _doc1Info = NULL ;
+    _doc2Info = NULL ;
 }
 
 Status::~Status()
 {
+    setDoc1Info(NULL);
+    setDoc2Info(NULL);
 }
 
 bool Status::isError()
@@ -73,7 +80,34 @@ void Status::setParamError(const bool error, const QString &paramName)
     }
 }
 
-int Status::returnOp(const EReturnType retType)
+DocInfo *Status::doc1Info() const
+{
+    return _doc1Info;
+}
+
+void Status::setDoc1Info(DocInfo *doc1Info)
+{
+    if( NULL != _doc1Info) {
+        delete _doc1Info ;
+    }
+    _doc1Info = doc1Info;
+}
+
+DocInfo *Status::doc2Info() const
+{
+    return _doc2Info;
+}
+
+void Status::setDoc2Info(DocInfo *doc2Info)
+{
+    if( NULL != _doc2Info) {
+        delete _doc2Info ;
+    }
+    _doc2Info = doc2Info;
+}
+
+
+int Status::returnOp(const EReturnType retType, StartupParameters *params, BatchCompare *compare)
 {
     QString description ;
     if( _description.isEmpty() ) {
@@ -105,6 +139,73 @@ int Status::returnOp(const EReturnType retType)
         description = _description;
     }
     int retCode = static_cast<int>(_status);
+
+    if( params->useXMLResultFile() ) {
+        QDateTime now = QDateTime::currentDateTime();
+        bool okFile = false;
+        QFile outFile(params->XMLResultFilePath());
+        if( outFile.open(QFile::WriteOnly|QFile::Truncate) ) {
+            QXmlStreamWriter stream(&outFile);
+            stream.setAutoFormatting(true);
+            stream.writeStartDocument();
+            stream.writeStartElement("diffResult");
+            stream.writeAttribute("code", QString::number(retCode) );
+            stream.writeAttribute("description", description);
+            stream.writeAttribute("date", now.toString(Qt::ISODate) );
+            stream.writeAttribute("key", params->key() );
+            //----
+            stream.writeStartElement("args");
+            stream.writeAttribute("mode", QString::number(params->comparisonMode()));
+            stream.writeAttribute("file1", params->file1());
+            stream.writeAttribute("file2", params->file2());
+            stream.writeAttribute("pages", QString::number(params->pages()));
+            stream.writeAttribute("startPage1", QString::number(params->startPage1()));
+            stream.writeAttribute("startPage2", QString::number(params->startPage2()));
+            stream.writeEndElement(); // args
+            //-----
+            stream.writeStartElement("info");
+            if( NULL != _doc1Info ) {
+                stream.writeStartElement("info1");
+                // write info 1
+                writeInfo(stream, _doc1Info);
+                stream.writeEndElement(); // info1
+            }
+            if( NULL != _doc2Info ) {
+                stream.writeStartElement("info2");
+                // write info 2
+                writeInfo(stream, _doc2Info);
+                stream.writeEndElement(); // info2
+            }
+            stream.writeEndElement(); // info
+
+            //---
+            stream.writeStartElement("run");
+            qint64 msecs = params->startTime().msecsTo(now);
+            stream.writeAttribute("durationInSec", QString::number((((double)msecs)/1000.0)));
+            stream.writeEndElement(); // run
+
+            if( NULL != compare ) {
+                stream.writeStartElement("parameters");
+                compare->writeParameters(stream);
+                stream.writeEndElement(); // parameters
+            }
+
+            stream.writeEndElement(); // diffResult
+            stream.writeEndDocument();
+            outFile.flush();
+            outFile.close();
+            if( outFile.error() == QFile::NoError ) {
+                okFile = true ;
+            }
+            //fare per info nell'xml risutlato
+            //fare parametri di lancio, tempo start e tempo end, durata e descrizione dei pdf
+        }
+        if( !okFile ) {
+            QTextStream out(stdout);
+            out << ErrorWritingXMLResultFile << "|" << QObject::tr("Error writing XML result file:%1").arg(outFile.errorString()) << "\n";
+            return ErrorWritingXMLResultFile ;
+        }
+    }
     QTextStream out(stdout);
     switch( retType ) {
     default:
@@ -115,5 +216,28 @@ int Status::returnOp(const EReturnType retType)
         out << retCode << "\n";
         break;
     }
+    out.flush();
     return retCode;
 }
+
+//----
+void Status::writeInfo(QXmlStreamWriter &writer, DocInfo *info)
+{
+    writer.writeAttribute("filename", info->fileName);
+    writer.writeAttribute("pageCount", QString::number(info->pageCount));
+    writer.writeAttribute("creationDate", info->creationDate);
+    writer.writeAttribute("modDate", info->modDate);
+    writer.writeAttribute("pageSize", info->pageSize);
+    writer.writeStartElement("items");
+    int size = info->infos.size();
+    for( int i = 0 ; i < size ; i ++ ) {
+        const QPair<QString,QString> &item = info->infos.at(i);
+        writer.writeStartElement("item");
+        writer.writeAttribute("name", item.first);
+        writer.writeAttribute("value", item.second);
+        writer.writeEndElement();
+    }
+    writer.writeEndElement();
+}
+
+//-----
