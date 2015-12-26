@@ -6,7 +6,7 @@
     <name>AboutForm</name>
     <message>
         <source>&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; by Mark Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-13 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. All rights reserved.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Built with Qt %3 and Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;This program compares the text or the visual appearance of each page in two PDF files.&lt;hr&gt;&lt;p&gt;If you like %1 you might like my books:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;I also provide training and consultancy in C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, and PyQt4.</source>
-        <translation>&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; par Marc Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-13 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. Tous droits réservés.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Construit avec Qt %3 et Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;Ce programme compare page à page le texte ou l&apos;apparence visuelle de deux fichiers PDF.&lt;hr&gt;&lt;p&gt;Si vous appréciez %1 vous pourriez également apprécier mes livres:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;J&apos;organise également des formations et propose des prestations de conseil en C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, and PyQt4.</translation>
+        <translation type="obsolete">&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; par Marc Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-13 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. Tous droits réservés.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Construit avec Qt %3 et Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;Ce programme compare page à page le texte ou l&apos;apparence visuelle de deux fichiers PDF.&lt;hr&gt;&lt;p&gt;Si vous appréciez %1 vous pourriez également apprécier mes livres:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;J&apos;organise également des formations et propose des prestations de conseil en C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, and PyQt4.</translation>
     </message>
     <message>
         <source>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=lightyellow&gt;&lt;i&gt;Anonymous Company&lt;/i&gt; &amp;mdash; funded the addition of the margin exclusion functionality&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;David Paleino&lt;/b&gt; &amp;mdash; Debian packager&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Dirk Loss&lt;/b&gt; &amp;mdash; creating Mac binaries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Florian Heiderich &amp;mdash; suggested using composition modes for showing subtle differences&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Jasmin Blanchette&lt;/b&gt; &amp;mdash; the original idea and subsequent suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Liviu Andronic &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Paul Howarth &amp;mdash; suggestions resulting in Characters mode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pavel Fric&lt;/i&gt; &amp;mdash; Czech translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pierre-Alain&lt;/i&gt; Bandinelli&amp;mdash; French translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Rainer Krachten&lt;/i&gt; &amp;mdash; German translation and various suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Rory Gordon &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Steven Lee&lt;/b&gt; &amp;mdash; creating Windows binaries&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
@@ -37,8 +37,59 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=lightyellow&gt;&lt;i&gt;Anonymous Company&lt;/i&gt; &amp;mdash; funded the addition of the margin exclusion functionality&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;David Paleino&lt;/b&gt; &amp;mdash; Debian packager&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Dirk Loss&lt;/b&gt; &amp;mdash; creating Mac binaries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Florian Heiderich &amp;mdash; suggested using composition modes for showing subtle differences&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Jasmin Blanchette&lt;/b&gt; &amp;mdash; the original idea and subsequent suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Liviu Andronic &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Paul Howarth &amp;mdash; suggestions resulting in Characters mode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pavel Fric&lt;/i&gt; &amp;mdash; Czech translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pierre-Alain Bandinelli&lt;/i&gt;&amp;mdash; French translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Rainer Krachten&lt;/i&gt; &amp;mdash; German translation and various suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Rory Gordon &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Bryan Huh &amp;mdash; subtle bug fix&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Steven Lee&lt;/b&gt; &amp;mdash; creating Windows binaries&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <source>&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; by Mark Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-13 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. All rights reserved.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Built with Qt %3 and Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;This program compares the text or the visual appearance of each page in two PDF files.&lt;p&gt;This version can be used in batch operations.&lt;hr&gt;&lt;p&gt;If you like %1 you might like my books:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;I also provide training and consultancy in C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, and PyQt4.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=lightyellow&gt;&lt;i&gt;Anonymous Company&lt;/i&gt; &amp;mdash; funded the addition of the margin exclusion functionality&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;David Paleino&lt;/b&gt; &amp;mdash; Debian packager&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Dirk Loss&lt;/b&gt; &amp;mdash; creating Mac binaries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Florian Heiderich &amp;mdash; suggested using composition modes for showing subtle differences&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Jasmin Blanchette&lt;/b&gt; &amp;mdash; the original idea and subsequent suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Liviu Andronic &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Paul Howarth &amp;mdash; suggestions resulting in Characters mode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pavel Fric&lt;/i&gt; &amp;mdash; Czech translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pierre-Alain Bandinelli&lt;/i&gt;&amp;mdash; French translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Rainer Krachten&lt;/i&gt; &amp;mdash; German translation and various suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Rory Gordon &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Bryan Huh &amp;mdash; subtle bug fix&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Steven Lee&lt;/b&gt; &amp;mdash; creating Windows binaries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Luca Bellonda&lt;/b&gt; &amp;mdash; batch processing feature&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>BatchCompare</name>
+    <message>
+        <source>Cannot load &apos;%1&apos;.</source>
+        <translation type="unfinished">Impossible de charger &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <source>Cannot read a locked PDF (&apos;%1&apos;).</source>
+        <translation type="unfinished">Impossible de lire un PDF verrouillé (&apos;%1&apos;).</translation>
+    </message>
+    <message>
+        <source>file: %1, start page greater than available pages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>file: %1, final page is not existing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the number of pages is not the same on both the documents, doc1:%1, doc2:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to read page %1 from &apos;%2&apos;.</source>
+        <translation type="unfinished">Impossible de lire la page %1 dans &apos;%2&apos;.</translation>
+    </message>
+    <message>
+        <source>documents differ at page: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DiffPDF %1 %2 vs. %3 %1 %4</source>
+        <translation type="unfinished">DiffPDF %1 %2 vs. %3 %1 %4</translation>
+    </message>
+    <message>
+        <source>DiffPDF</source>
+        <translation type="unfinished">DiffPDF</translation>
+    </message>
+    <message>
+        <source>error while writing differences file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DiffPDF: False Positive</source>
+        <translation type="unfinished">DiffPDF : Faux positif</translation>
     </message>
 </context>
 <context>
@@ -574,26 +625,6 @@
         <source>DiffPDF — Choose File #2</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>file: %1, start page greater than available pages</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>file: %1, final page is not existing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>the number of pages is not the same on both the documents, doc1:%1, doc2:%2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>files differ at page: %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>error while writing differences file</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>OptionsForm</name>
@@ -790,6 +821,26 @@
     </message>
     <message>
         <source>unable to load file 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>unrecognized argument &apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>file 1 missing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>file 2 missing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>file: &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error writing XML result file:%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
