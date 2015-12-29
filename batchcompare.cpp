@@ -439,6 +439,7 @@ void BatchCompare::batchOperation()
                        _startupParameters->file1(), pdf1,
                       _startupParameters->file2(), pdf2);
     if( _status->isError() && _status->isErrorComparing() ) {
+        _status->setPagesNotEqualCount(results.count());
         if( _startupParameters->enablePDFDiff() ) {
             saveResultsBatch(_status, results, pdf1, pdf2 ) ;
         }

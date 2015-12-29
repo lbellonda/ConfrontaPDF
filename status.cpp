@@ -20,6 +20,7 @@
 
 Status::Status()
 {
+    _pagesNotEqualCount = 0 ;
     _status = ENoErrors ;
     _doc1Info = NULL ;
     _doc2Info = NULL ;
@@ -162,6 +163,7 @@ int Status::returnOp(const EReturnType retType, StartupParameters *params, Batch
             stream.writeAttribute("pages", QString::number(params->pages()));
             stream.writeAttribute("startPage1", QString::number(params->startPage1()));
             stream.writeAttribute("startPage2", QString::number(params->startPage2()));
+            stream.writeAttribute("pageDiffCount", QString::number(_pagesNotEqualCount));
             stream.writeEndElement(); // args
             //-----
             stream.writeStartElement("info");
@@ -185,6 +187,7 @@ int Status::returnOp(const EReturnType retType, StartupParameters *params, Batch
             stream.writeAttribute("durationInSec", QString::number((((double)msecs)/1000.0)));
             stream.writeAttribute("swVersion", AboutForm::Version);
             stream.writeAttribute("xmlResultFile", params->XMLResultFilePath());
+            stream.writeAttribute("pdfDiffFile", params->pdfDiffFilePath());
             stream.writeEndElement(); // run
 
             if( NULL != compare ) {
@@ -244,3 +247,13 @@ void Status::writeInfo(QXmlStreamWriter &writer, DocInfo *info)
 }
 
 //-----
+
+int Status::pagesNotEqualCount() const
+{
+    return _pagesNotEqualCount;
+}
+
+void Status::setPagesNotEqualCount(int pagesNotEqualCount)
+{
+    _pagesNotEqualCount = pagesNotEqualCount;
+}

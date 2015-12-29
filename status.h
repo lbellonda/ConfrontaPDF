@@ -48,6 +48,7 @@ class Status
     QString _paramInError;
     DocInfo *_doc1Info;
     DocInfo *_doc2Info;
+    int _pagesNotEqualCount;
 public:
     Status();
     ~Status();
@@ -67,7 +68,10 @@ public:
     DocInfo *doc2Info() const;
     void setDoc2Info(DocInfo *doc2Info);
 
-    private:
+    int pagesNotEqualCount() const;
+    void setPagesNotEqualCount(int pagesNotEqualCount);
+
+private:
     void writeInfo(QXmlStreamWriter &writer, DocInfo *info);
 };
 
