@@ -33,17 +33,6 @@
 
 class CommandLineManager : public CompareNotifier
 {
-    QBrush brush;
-    QPen pen;
-    bool showToolTips;
-    bool combineTextHighlighting;
-    bool saveAll;
-    SavePages savePages;
-    const QString language;
-    Debug debug;
-    StartupParameters *_startupParameters;
-    Status *_status;
-
     BatchCompare compare;
 
     void initCompareParams();

@@ -1,0 +1,58 @@
+.TH CONFRONTAPDFC 1 "2015-12-30" "confrontapdfc v1.0.0"
+.SH NAME
+confrontapdfc \- compare two PDF files command line
+.SH SYNOPSIS
+.B confrontapdfc
+.RI [ file1 ]
+.RI [ file2 ]
+.SH DESCRIPTION
+This manual page very briefly documents the \fBconfrontapdfc\fP command.
+.PP
+\fBConfrontaPDFc\fP is an application used to compare two PDF files in console mode only.
+.br
+By default the comparison is comparing the pages
+by appearance (for example, if a diagram is changed or if a paragraph is
+reformatted, or a font changed). It is also possible to compare
+particular pages and having the result written in an XML file.
+It is possible to generate a PDF document with the differences between the
+given documents.
+.PP
+.SH OPTIONS
+In batch mode the parameters are:
+
+.IP --batch -b
+activates the batch mode (console only)
+.IP --outType=0
+prints only the return code in batch mode
+.IP --outType=1
+prints the return code and a description in batch mode
+.IP --pages=nn
+the number of pages to compare (default all)
+.IP --startPage1=nn
+the stating page number for file 1
+.IP --startPage2=nn
+the stating page number for file 2
+.IP --pdfdiff=path
+generates a pdf with differences
+.IP --xmlResult=path
+generates file with the comparison result in XML
+.IP --key=aKey
+a key to be recorded in the result file
+.IP --settings=file
+settings (in INI format) to override default parameters
+
+.PP
+.SH SAMPLE
+confrontapdfc -b --pdfdiff=file_diff.pdf --xmlResult=file_results.xml --key=opkey file1.pdf file2.pdf
+
+
+.SH AUTHOR
+ConfrontaPDFc is a fork of DiffPDF project by Luca
+Bellonda <lbellonda@gmail.com>, begun in 2015.
+The open source DiffPDF was created and maintained by Mark
+Summerfield 2008-2013.
+
+.PP
+This manual page was originally written by Mark Summerfield <mark@qtrac.eu>
+and David Paleino <dapal@debian.org>,
+for the Debian project (and may be used by others).

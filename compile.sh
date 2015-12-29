@@ -1,4 +1,6 @@
 #!/bin/sh
-qmake "CONFIG+=release"
+qmake confrontapdf.pro "CONFIG+=release"
+make
+qmake confrontapdfc.pro "CONFIG+=release"
 make
 

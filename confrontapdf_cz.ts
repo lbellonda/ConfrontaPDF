@@ -5,7 +5,7 @@
 <context>
     <name>AboutForm</name>
     <message>
-        <location filename="aboutform.cpp" line="31"/>
+        <location filename="aboutform.cpp" line="34"/>
         <source>&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; by Mark Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-13 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. All rights reserved.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Built with Qt %3 and Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;This program compares the text or the visual appearance of each page in two PDF files.&lt;p&gt;This version can be used in batch operations.&lt;hr&gt;&lt;p&gt;If you like %1 you might like my books:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;I also provide training and consultancy in C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, and PyQt4.</source>
         <oldsource>&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; by Mark Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-13 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. All rights reserved.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Built with Qt %3 and Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;This program compares the text or the visual appearance of each page in two PDF files.&lt;hr&gt;&lt;p&gt;If you like %1 you might like my books:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;I also provide training and consultancy in C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, and PyQt4.</oldsource>
         <translation type="unfinished">&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; od Marka Summerfielda&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Autorské právo &amp;copy; 2008-2012 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. Všechna práva vyhrazena.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Sestaveno s Qt %3 a Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;Tento program srovnává text nebo viditelný vzhled každé strany ve dvou souborech PDF.&lt;hr&gt;&lt;p&gt;Pokud se vám líbí %1, mohou se vám líbit i moje knihy:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programování v Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Pokročilé programování v Qt&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programování v Pythonu 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rychlé programování GUI v Pythonu a Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;Také poskytuji školení a poradenství v C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, a PyQt4.</translation>
@@ -16,34 +16,34 @@
         <translation type="obsolete">&lt;table&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=lightyellow&gt;&lt;i&gt;Anonymní společnost&lt;/i&gt; &amp;mdash; financovala přidání funkce vyloučení okraje&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;David Paleino&lt;/b&gt; &amp;mdash; tvůrce balíčků pro Debian&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Dirk Loss&lt;/b&gt; &amp;mdash; vytvoření instalačních souborů pro Apple Mac&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Florian Heiderich &amp;mdash; navrhl použití skladebných režimů pro ukázání jemných rozdílů&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Jasmin Blanchette&lt;/b&gt; &amp;mdash; původní myšlenka a následující návrhy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Liviu Andronic &amp;mdash; navrhl přidání funkce táhnout a upustit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Paul Howarth &amp;mdash; návrhy vedoucí ve výsledku k režimu znaků&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pavel Fric&lt;/i&gt; &amp;mdash; překlad do češtiny&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;Pierre-Alain Bandinelli&amp;mdash; překlad do francouzštiny&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Rainer Krachten&lt;/i&gt; &amp;mdash; překlad do němčiny a různé návrhy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Rory Gordon &amp;mdash; navrhl přidání funkce táhnout a upustit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Steven Lee&lt;/b&gt; &amp;mdash; vytvoření instalačních souborů pro Windows&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="59"/>
+        <location filename="aboutform.cpp" line="62"/>
         <source>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=lightyellow&gt;&lt;i&gt;Anonymous Company&lt;/i&gt; &amp;mdash; funded the addition of the margin exclusion functionality&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;David Paleino&lt;/b&gt; &amp;mdash; Debian packager&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Dirk Loss&lt;/b&gt; &amp;mdash; creating Mac binaries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Florian Heiderich &amp;mdash; suggested using composition modes for showing subtle differences&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Jasmin Blanchette&lt;/b&gt; &amp;mdash; the original idea and subsequent suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Liviu Andronic &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Paul Howarth &amp;mdash; suggestions resulting in Characters mode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pavel Fric&lt;/i&gt; &amp;mdash; Czech translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pierre-Alain Bandinelli&lt;/i&gt;&amp;mdash; French translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Rainer Krachten&lt;/i&gt; &amp;mdash; German translation and various suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Rory Gordon &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Bryan Huh &amp;mdash; subtle bug fix&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Steven Lee&lt;/b&gt; &amp;mdash; creating Windows binaries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Luca Bellonda&lt;/b&gt; &amp;mdash; batch processing feature&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="91"/>
+        <location filename="aboutform.cpp" line="94"/>
         <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option), any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (in file &lt;tt&gt;gpl-2.0.txt&lt;/tt&gt;) for more details.</source>
         <translation>Tento program je svobodným softwarem; můžete jej rozdávat a/nebo upravovat za podmínek GNU General Public License (GPL), jak jsou zveřejněny Free Software Foundation; buď ve verzi 2 licence, nebo (podle své volby) v kterékoli pozdější verzi.
 
 Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁRUKY; také bez předpokládané záruky PRODEJNOSTI nebo POUŽITELNOSTI PRO NĚJAKÝ URČITÝ ÚČEL: Více podrobností naleznete v GNU Library General Public License (v souboru &lt;tt&gt;gpl-2.0.txt&lt;/tt&gt;).</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="102"/>
+        <location filename="aboutform.cpp" line="105"/>
         <source>&amp;About</source>
         <translation>&amp;O programu</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="103"/>
+        <location filename="aboutform.cpp" line="106"/>
         <source>&amp;Contributors</source>
         <translation>&amp;Přispěvatelé</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="104"/>
+        <location filename="aboutform.cpp" line="107"/>
         <source>&amp;License</source>
         <translation>&amp;Povolení</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="109"/>
+        <location filename="aboutform.cpp" line="112"/>
         <source>%1 — About</source>
         <translation>%1 — O programu</translation>
     </message>
@@ -90,13 +90,13 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
     </message>
     <message>
         <location filename="batchcompare.cpp" line="521"/>
-        <source>DiffPDF %1 %2 vs. %3 %1 %4</source>
+        <source>%5 %1 %2 vs. %3 %1 %4</source>
+        <oldsource>DiffPDF %1 %2 vs. %3 %1 %4</oldsource>
         <translation type="unfinished">DiffPDF %1 %2 s %3 %1 %4</translation>
     </message>
     <message>
-        <location filename="batchcompare.cpp" line="536"/>
         <source>DiffPDF</source>
-        <translation type="unfinished">DiffPDF</translation>
+        <translation type="obsolete">DiffPDF</translation>
     </message>
     <message>
         <location filename="batchcompare.cpp" line="558"/>
@@ -106,7 +106,8 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
     </message>
     <message>
         <location filename="batchcompare.cpp" line="658"/>
-        <source>DiffPDF: False Positive</source>
+        <source>%1: False Positive</source>
+        <oldsource>DiffPDF: False Positive</oldsource>
         <translation type="unfinished">DiffPDF — Falešné kladné výsledky</translation>
     </message>
 </context>
@@ -125,10 +126,8 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.cpp" line="104"/>
-        <location filename="mainwindow.cpp" line="1697"/>
         <source>DiffPDF</source>
-        <translation>DiffPDF</translation>
+        <translation type="obsolete">DiffPDF</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="116"/>
@@ -305,8 +304,9 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
     </message>
     <message>
         <location filename="mainwindow.cpp" line="242"/>
-        <source>&lt;p&gt;Use this to tell DiffPDF how many columns the page has; this should improve the zoning.</source>
-        <translation>&lt;p&gt;Toto použijte na to, abyste DiffPDF pověděli, kolik sloupců strana má; mělo by to zlepšit rozdělení na pásma.</translation>
+        <source>&lt;p&gt;Use this to tell %1 how many columns the page has; this should improve the zoning.</source>
+        <oldsource>&lt;p&gt;Use this to tell DiffPDF how many columns the page has; this should improve the zoning.</oldsource>
+        <translation type="unfinished">&lt;p&gt;Toto použijte na to, abyste DiffPDF pověděli, kolik sloupců strana má; mělo by to zlepšit rozdělení na pásma.</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="246"/>
@@ -494,38 +494,45 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
     </message>
     <message>
         <location filename="mainwindow.cpp" line="730"/>
-        <source>DiffPDF — Controls</source>
-        <translation>DiffPDF — Ovládání</translation>
+        <source>%1 — Controls</source>
+        <oldsource>DiffPDF — Controls</oldsource>
+        <translation type="unfinished">DiffPDF — Ovládání</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="742"/>
-        <source>DiffPDF — Actions</source>
-        <translation>DiffPDF — Činnosti</translation>
+        <source>%1 — Actions</source>
+        <oldsource>DiffPDF — Actions</oldsource>
+        <translation type="unfinished">DiffPDF — Činnosti</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="754"/>
-        <source>DiffPDF — Zoning</source>
-        <translation>DiffPDF — Rozdělení na oblasti</translation>
+        <source>%1 — Zoning</source>
+        <oldsource>DiffPDF — Zoning</oldsource>
+        <translation type="unfinished">DiffPDF — Rozdělení na oblasti</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="766"/>
-        <source>DiffPDF — Margins</source>
-        <translation>DiffPDF — Okraje</translation>
+        <source>%1 — Margins</source>
+        <oldsource>DiffPDF — Margins</oldsource>
+        <translation type="unfinished">DiffPDF — Okraje</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="773"/>
-        <source>DiffPDF — Log</source>
-        <translation>DiffPDF — Zápis</translation>
+        <source>%1 — Log</source>
+        <oldsource>DiffPDF — Log</oldsource>
+        <translation type="unfinished">DiffPDF — Zápis</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="919"/>
-        <source>DiffPDF: False Positive</source>
-        <translation>DiffPDF — Falešné kladné výsledky</translation>
+        <source>%1: False Positive</source>
+        <oldsource>DiffPDF: False Positive</oldsource>
+        <translation type="unfinished">DiffPDF — Falešné kladné výsledky</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1187"/>
-        <source>DiffPDF — Choose File #1</source>
-        <translation>DiffPDF — Vybrat soubor #1</translation>
+        <source>%1 — Choose File #1</source>
+        <oldsource>DiffPDF — Choose File #1</oldsource>
+        <translation type="unfinished">DiffPDF — Vybrat soubor #1</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1188"/>
@@ -539,8 +546,9 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
         <location filename="mainwindow.cpp" line="1256"/>
         <location filename="mainwindow.cpp" line="1259"/>
         <location filename="mainwindow.cpp" line="1942"/>
-        <source>DiffPDF — Error</source>
-        <translation>DiffPDF — Chyba</translation>
+        <source>%1 — Error</source>
+        <oldsource>DiffPDF — Error</oldsource>
+        <translation type="unfinished">DiffPDF — Chyba</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1192"/>
@@ -550,13 +558,15 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1197"/>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Klepněte na Porovnat&lt;br&gt;nebo změňte Soubor #2.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Klepněte na Porovnat&lt;br&gt;nebo změňte Soubor #2.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1201"/>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Choose File #2.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Vybrat soubor #2.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Choose File #2.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Choose File #2.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Vybrat soubor #2.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1206"/>
@@ -578,18 +588,21 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1221"/>
-        <source>DiffPDF — Choose File #2</source>
-        <translation>DiffPDF — Vybrat soubor #2</translation>
+        <source>%1 — Choose File #2</source>
+        <oldsource>DiffPDF — Choose File #2</oldsource>
+        <translation type="unfinished">DiffPDF — Vybrat soubor #2</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1231"/>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Klepněte na Porovnat&lt;br&gt;nebo změňte Soubor #1.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Klepněte na Porovnat&lt;br&gt;nebo změňte Soubor #1.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1235"/>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Choose File #1.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Vybrat soubor #1.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Choose File #1.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Choose File #1.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Vybrat soubor #1.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1244"/>
@@ -717,8 +730,9 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1491"/>
-        <source>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;DiffPDF: The PDFs appear to be the same.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: PDF se zdají být stejná.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;%1: The PDFs appear to be the same.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;DiffPDF: The PDFs appear to be the same.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: PDF se zdají být stejná.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1501"/>
@@ -737,13 +751,15 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
     <message>
         <location filename="mainwindow.cpp" line="1617"/>
         <location filename="mainwindow.cpp" line="1621"/>
-        <source>DiffPDF %1 %2 %1 %3</source>
-        <translation>DiffPDF %1 %2 %1 %3</translation>
+        <source>%4 %1 %2 %1 %3</source>
+        <oldsource>DiffPDF %1 %2 %1 %3</oldsource>
+        <translation type="unfinished">DiffPDF %1 %2 %1 %3</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1625"/>
-        <source>DiffPDF %1 %2 vs. %3 %1 %4</source>
-        <translation>DiffPDF %1 %2 s %3 %1 %4</translation>
+        <source>%4 %1 %2 vs. %3 %1 %4</source>
+        <oldsource>DiffPDF %1 %2 vs. %3 %1 %4</oldsource>
+        <translation type="unfinished">DiffPDF %1 %2 s %3 %1 %4</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1634"/>
@@ -760,203 +776,207 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
 <context>
     <name>OptionsForm</name>
     <message>
-        <location filename="optionsform.cpp" line="45"/>
         <source>DiffPDF — Options</source>
-        <translation>DiffPDF — Volby</translation>
+        <translation type="obsolete">DiffPDF — Volby</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="64"/>
+        <location filename="optionsform.cpp" line="46"/>
+        <source>%1 — Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="optionsform.cpp" line="65"/>
         <source>No Brush</source>
         <translation>Žádný štětec</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="65"/>
-        <location filename="optionsform.cpp" line="87"/>
+        <location filename="optionsform.cpp" line="66"/>
+        <location filename="optionsform.cpp" line="88"/>
         <source>Solid</source>
         <translation>Plný</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="66"/>
+        <location filename="optionsform.cpp" line="67"/>
         <source>Dense #1</source>
         <translation>Hustá #1</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="67"/>
+        <location filename="optionsform.cpp" line="68"/>
         <source>Dense #2</source>
         <translation>Hustá #2</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="68"/>
+        <location filename="optionsform.cpp" line="69"/>
         <source>Dense #3</source>
         <translation>Hustá #3</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="69"/>
+        <location filename="optionsform.cpp" line="70"/>
         <source>Dense #4</source>
         <translation>Hustá #4</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="70"/>
+        <location filename="optionsform.cpp" line="71"/>
         <source>Dense #5</source>
         <translation>Hustá #5</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="71"/>
+        <location filename="optionsform.cpp" line="72"/>
         <source>Dense #6</source>
         <translation>Hustá #6</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="72"/>
+        <location filename="optionsform.cpp" line="73"/>
         <source>Horizontal</source>
         <translation>Vodorovná</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="73"/>
+        <location filename="optionsform.cpp" line="74"/>
         <source>Vertical</source>
         <translation>Svislá</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="74"/>
+        <location filename="optionsform.cpp" line="75"/>
         <source>Cross</source>
         <translation>Kříž</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="75"/>
+        <location filename="optionsform.cpp" line="76"/>
         <source>Diagonal /</source>
         <translation>Šikmá /</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="76"/>
+        <location filename="optionsform.cpp" line="77"/>
         <source>Diagonal \</source>
         <translation>Šikmá \</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="77"/>
+        <location filename="optionsform.cpp" line="78"/>
         <source>Diagonal Cross</source>
         <translation>Šikmá kříž</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="86"/>
+        <location filename="optionsform.cpp" line="87"/>
         <source>No Pen</source>
         <translation>Žádné pero</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="88"/>
+        <location filename="optionsform.cpp" line="89"/>
         <source>Dashed</source>
         <translation>Čárkovaný</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="89"/>
+        <location filename="optionsform.cpp" line="90"/>
         <source>Dotted</source>
         <translation>Tečkovaný</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="90"/>
+        <location filename="optionsform.cpp" line="91"/>
         <source>Dash-Dotted</source>
         <translation>Čárkovaný-tečkovaný</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="91"/>
+        <location filename="optionsform.cpp" line="92"/>
         <source>Dash-Dot-Dotted</source>
         <translation>Čárkovaný-tečka-tečkovaný</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="100"/>
+        <location filename="optionsform.cpp" line="101"/>
         <source> %</source>
         <translation> %</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="102"/>
+        <location filename="optionsform.cpp" line="103"/>
         <source>&lt;p&gt;How opaque the highlighting color is. The default is 13%</source>
         <translation>&lt;p&gt;Nakolik neprůhledná je zvýrazňovací barva. Výchozí hodnota je 13%</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="108"/>
+        <location filename="optionsform.cpp" line="109"/>
         <source> px</source>
         <translation> px</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="110"/>
+        <location filename="optionsform.cpp" line="111"/>
         <source>&lt;p&gt;The size of the highlighting squares in Appearance mode. Small values are more expensive to compute. Large values give coarse comparisons. The default is 10 px</source>
         <translation>&lt;p&gt;Velikost zvýrazňovacích polí v režimu Vzhled. Malé hodnoty jsou více náročné na výpočet. Velké hodnoty dávají hrubá porovnání. Výchozí hodnota je 10 px</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="120"/>
+        <location filename="optionsform.cpp" line="121"/>
         <source>No Rules</source>
         <translation>Žádné vyznačovací čáry</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="123"/>
+        <location filename="optionsform.cpp" line="124"/>
         <source>Show &amp;Tooltips in the Main Window</source>
         <translation>Ukázat v hlavním okně &amp;nástrojové rady</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="128"/>
+        <location filename="optionsform.cpp" line="129"/>
         <source>Combine Highlighting in &amp;Text Modes</source>
         <translation>Spojit zvýraznění v &amp;textových režimech</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="135"/>
+        <location filename="optionsform.cpp" line="136"/>
         <source> MB</source>
         <translation> MB</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="136"/>
+        <location filename="optionsform.cpp" line="137"/>
         <source>&lt;p&gt;The cache is used to store pages already seen to make flipping back and forth as fast as possible. The bigger the cache the more pages that can be stored.</source>
         <translation>&lt;p&gt;Vyrovnávací paměť se používá na ukládání již viděných stran, aby bylo prolistování zpět a vpřed tak rychlé, jak jen je to možné. Čím větší je vyrovnávací paměť, tím více stran lze uložit.</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="151"/>
+        <location filename="optionsform.cpp" line="152"/>
         <source>&amp;Rule width:</source>
         <translation>Šířka v&amp;yznačovací čáry:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="154"/>
+        <location filename="optionsform.cpp" line="155"/>
         <source>&amp;General</source>
         <translation>&amp;Obecné</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="157"/>
+        <location filename="optionsform.cpp" line="158"/>
         <source>&amp;Base Color:</source>
         <translation>Zá&amp;kladní barva:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="158"/>
+        <location filename="optionsform.cpp" line="159"/>
         <source>O&amp;utline:</source>
         <translation>&amp;Obrys:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="159"/>
+        <location filename="optionsform.cpp" line="160"/>
         <source>&amp;Fill:</source>
         <translation>&amp;Výplň:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="160"/>
+        <location filename="optionsform.cpp" line="161"/>
         <source>F&amp;ill Opacity:</source>
         <translation>Neprůhlednost výp&amp;lně:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="163"/>
+        <location filename="optionsform.cpp" line="164"/>
         <source>&lt;p&gt;The outline and fill are used to highlight differences using a semi-transparent version of the base color. The margin rules are painted using the base color  and indicate where changes are. Set the rule width to 0.0 to switch the rules off. If combining highlighting is checked it will try to merge the highlighting of adjacent text differences.</source>
         <translation>&lt;p&gt;Obrys a výplň se používají na zvýraznění rozdílů pomocí poloprůhledného podání základní barvy. Vyznačovací čáry na okrajích jsou malovány pomocí základní barvy a naznačují, kde jsou změny. Nastavte šířku vyznačovací čáry na 0.0 pro vypnutí  vyznačovacích čar. Je-li zaškrtnuto spojení zvýraznění, bude proveden pokus o sloučení zvýraznění sousedních textových rozdílů.</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="171"/>
+        <location filename="optionsform.cpp" line="172"/>
         <source>&amp;Highlighting</source>
         <translation>&amp;Zvýraznění</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="174"/>
+        <location filename="optionsform.cpp" line="175"/>
         <source>&amp;Square Size:</source>
         <translation>Velikost &amp;pole:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="175"/>
+        <location filename="optionsform.cpp" line="176"/>
         <source>C&amp;ache Size:</source>
         <translation>V&amp;elikost vyrovnávací paměti:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="178"/>
+        <location filename="optionsform.cpp" line="179"/>
         <source>&amp;Performance</source>
         <translation>&amp;Výkon</translation>
     </message>
@@ -999,12 +1019,12 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="status.cpp" line="207"/>
+        <location filename="status.cpp" line="208"/>
         <source>Error writing XML result file:%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.cpp" line="144"/>
+        <location filename="main.cpp" line="149"/>
         <source>unrecognized argument &apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1027,62 +1047,70 @@ Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI ZÁ
 <context>
     <name>SaveForm</name>
     <message>
-        <location filename="saveform.cpp" line="36"/>
         <source>DiffPDF — Save As</source>
-        <translation>DiffPDF — Uložit jako</translation>
+        <translation type="obsolete">DiffPDF — Uložit jako</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="42"/>
+        <location filename="saveform.cpp" line="37"/>
+        <source>%1 — Save As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="saveform.cpp" line="43"/>
         <source>Pairs</source>
         <translation>Dvojice</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="43"/>
+        <location filename="saveform.cpp" line="44"/>
         <source>Current &amp;Page Pair</source>
         <translation>Nynější dvojice &amp;stran</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="44"/>
+        <location filename="saveform.cpp" line="45"/>
         <source>&amp;All Page Pairs</source>
         <translation>&amp;Všechny dvojice stran</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="49"/>
+        <location filename="saveform.cpp" line="50"/>
         <source>Pages</source>
         <translation>Strany</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="50"/>
+        <location filename="saveform.cpp" line="51"/>
         <source>File #&amp;1&apos;s Pages</source>
         <translation>Soubor #&amp;1 strany</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="51"/>
+        <location filename="saveform.cpp" line="52"/>
         <source>File #&amp;2&apos;s Pages</source>
         <translation>Soubor #&amp;2 strany</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="52"/>
+        <location filename="saveform.cpp" line="53"/>
         <source>&amp;Both Files&apos; Pages</source>
         <translation>&amp;Obě strany souboru</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="59"/>
+        <location filename="saveform.cpp" line="60"/>
         <source>&amp;Filename:</source>
         <translation>&amp;Název souboru:</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="63"/>
+        <location filename="saveform.cpp" line="64"/>
         <source>B&amp;rowse...</source>
         <translation>&amp;Procházet...</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="119"/>
-        <source>DiffPDF — Browse</source>
-        <translation>DiffPDF — Procházet</translation>
+        <location filename="saveform.cpp" line="120"/>
+        <source>%1 — Browse</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="120"/>
+        <source>DiffPDF — Browse</source>
+        <translation type="obsolete">DiffPDF — Procházet</translation>
+    </message>
+    <message>
+        <location filename="saveform.cpp" line="121"/>
         <source>PDF files (*.pdf);;Image files (%1)</source>
         <translation>Soubory PDF (*.pdf);;Obrázkové soubory (%1)</translation>
     </message>

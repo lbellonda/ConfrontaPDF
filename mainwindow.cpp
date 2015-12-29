@@ -101,7 +101,7 @@ MainWindow::MainWindow(const Debug debug,
     marginsDockWidget->resize(marginsDockWidget->minimumSizeHint());
     //logDockWidget->resize(logDockWidget->minimumSizeHint());
 
-    setWindowTitle(tr("DiffPDF"));
+    setWindowTitle(AboutForm::ProgramName);
     setWindowIcon(QIcon(":/icon.png"));
     compareComboBox->setCurrentIndex(comparisonMode);
     QMetaObject::invokeMethod(this, "initialize", Qt::QueuedConnection,
@@ -239,9 +239,9 @@ void MainWindow::createWidgets(const QString &filename1,
     columnsSpinBox->setRange(1, 16);
     columnsSpinBox->setValue(settings.value("Columns", 1).toInt());
     columnsSpinBox->setAlignment(Qt::AlignVCenter|Qt::AlignRight);
-    columnsSpinBox->setToolTip(tr("<p>Use this to tell DiffPDF how "
+    columnsSpinBox->setToolTip(tr("<p>Use this to tell %1 how "
                 "many columns the page has; this should improve the "
-                "zoning."));
+                "zoning.").arg(AboutForm::ProgramName));
     columnsLabel->setBuddy(columnsSpinBox);
     toleranceRLabel = new QLabel(tr("Tolerance/&R:"));
     toleranceRSpinBox = new QSpinBox;
@@ -727,7 +727,7 @@ void MainWindow::controlTopLevelChanged(bool floating)
     if (QWidget *widget = static_cast<QWidget*>(controlLayout->parent()))
         widget->setFixedSize(floating ? widget->minimumSizeHint()
                 : QSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX));
-    controlDockWidget->setWindowTitle(floating ? tr("DiffPDF — Controls")
+    controlDockWidget->setWindowTitle(floating ? tr("%1 — Controls").arg(AboutForm::ProgramName)
                                                : tr("Controls"));
 }
 
@@ -739,7 +739,7 @@ void MainWindow::actionTopLevelChanged(bool floating)
     if (QWidget *widget = static_cast<QWidget*>(actionLayout->parent()))
         widget->setFixedSize(floating ? widget->minimumSizeHint()
                 : QSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX));
-    actionDockWidget->setWindowTitle(floating ? tr("DiffPDF — Actions")
+    actionDockWidget->setWindowTitle(floating ? tr("%1 — Actions").arg(AboutForm::ProgramName)
                                               : tr("Actions"));
 }
 
@@ -751,7 +751,7 @@ void MainWindow::zoningTopLevelChanged(bool floating)
     if (QWidget *widget = static_cast<QWidget*>(zoningLayout->parent()))
         widget->setFixedSize(floating ? widget->minimumSizeHint()
                 : QSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX));
-    zoningDockWidget->setWindowTitle(floating ? tr("DiffPDF — Zoning")
+    zoningDockWidget->setWindowTitle(floating ? tr("%1 — Zoning").arg(AboutForm::ProgramName)
                                               : tr("Zoning"));
 }
 
@@ -763,14 +763,14 @@ void MainWindow::marginsTopLevelChanged(bool floating)
     if (QWidget *widget = static_cast<QWidget*>(marginsLayout->parent()))
         widget->setFixedSize(floating ? widget->minimumSizeHint()
                 : QSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX));
-    marginsDockWidget->setWindowTitle(floating ? tr("DiffPDF — Margins")
+    marginsDockWidget->setWindowTitle(floating ? tr("%1 — Margins").arg(AboutForm::ProgramName)
                                               : tr("Margins"));
 }
 
 
 void MainWindow::logTopLevelChanged(bool floating)
 {
-    logDockWidget->setWindowTitle(floating ? tr("DiffPDF — Log")
+    logDockWidget->setWindowTitle(floating ? tr("%1 — Log").arg(AboutForm::ProgramName)
                                            : tr("Log"));
 }
 
@@ -916,7 +916,7 @@ const QPair<QPixmap, QPixmap> MainWindow::populatePixmaps(
                 font.setOverline(true);
                 font.setUnderline(true);
                 highlighted1.addText(DPI / 4, DPI / 4, font,
-                    tr("DiffPDF: False Positive"));
+                    tr("%1: False Positive").arg(AboutForm::ProgramName));
                 paintOnImage(highlighted1, &image1);
             }
             pixmap1 = QPixmap::fromImage(image1);
@@ -1184,22 +1184,22 @@ void MainWindow::setFile1(QString filename)
 {
     if (filename.isEmpty())
         filename = QFileDialog::getOpenFileName(this,
-                tr("DiffPDF — Choose File #1"), currentPath,
+                tr("%1 — Choose File #1").arg(AboutForm::ProgramName), currentPath,
                 tr("PDF files (*.pdf)"));
     if (!filename.isEmpty()) {
         if (filename == filename2LineEdit->text()) {
-            QMessageBox::warning(this, tr("DiffPDF — Error"),
+            QMessageBox::warning(this, tr("%1 — Error").arg(AboutForm::ProgramName),
                     tr("Cannot compare a file to itself."));
             return;
         }
         filename1LineEdit->setText(filename);
         if (!filename2LineEdit->text().isEmpty())
             page1Label->setText(tr("<p style='font-size: xx-large;"
-                    "color: darkgreen'>DiffPDF: Click Compare<br>"
-                    "or change File #2.</p>"));
+                    "color: darkgreen'>%1: Click Compare<br>"
+                    "or change File #2.</p>").arg(AboutForm::ProgramName));
         else
             page1Label->setText(tr("<p style='font-size: xx-large;"
-                    "color: darkgreen'>DiffPDF: Choose File #2.</p>"));
+                    "color: darkgreen'>%1: Choose File #2.</p>").arg(AboutForm::ProgramName));
         page2Label->clear();
         updateUi();
         int page_count = writeFileInfo(filename);
@@ -1218,22 +1218,22 @@ void MainWindow::setFile2(QString filename)
 {
     if (filename.isEmpty())
         filename = QFileDialog::getOpenFileName(this,
-                tr("DiffPDF — Choose File #2"), currentPath,
+                tr("%1 — Choose File #2").arg(AboutForm::ProgramName), currentPath,
                 tr("PDF files (*.pdf)"));
     if (!filename.isEmpty()) {
         if (filename == filename1LineEdit->text()) {
-            QMessageBox::warning(this, tr("DiffPDF — Error"),
+            QMessageBox::warning(this, tr("%1 — Error").arg(AboutForm::ProgramName),
                     tr("Cannot compare a file to itself."));
             return;
         }
         filename2LineEdit->setText(filename);
         if (!filename1LineEdit->text().isEmpty())
             page2Label->setText(tr("<p style='font-size: xx-large;"
-                    "color: darkgreen'>DiffPDF: Click Compare<br>"
-                    "or change File #1.</p>"));
+                    "color: darkgreen'>%1: Click Compare<br>"
+                    "or change File #1.</p>").arg(AboutForm::ProgramName));
         else
             page2Label->setText(tr("<p style='font-size: xx-large;"
-                    "color: darkgreen'>DiffPDF: Choose File #1.</p>"));
+                    "color: darkgreen'>%1: Choose File #1.</p>").arg(AboutForm::ProgramName));
         page1Label->clear();
         updateUi();
         int page_count = writeFileInfo(filename);
@@ -1253,10 +1253,10 @@ PdfDocument MainWindow::getPdf(const QString &filename)
     PdfDocument pdf(Poppler::Document::load(filename));
     if(!_startupParameters->isBatch()) {
         if (!pdf)
-            QMessageBox::warning(this, tr("DiffPDF — Error"),
+            QMessageBox::warning(this, tr("%1 — Error").arg(AboutForm::ProgramName),
                     tr("Cannot load '%1'.").arg(filename));
         else if (pdf->isLocked()) {
-            QMessageBox::warning(this, tr("DiffPDF — Error"),
+            QMessageBox::warning(this, tr("%1 — Error").arg(AboutForm::ProgramName),
                     tr("Cannot read a locked PDF ('%1').").arg(filename));
     #if QT_VERSION >= 0x040600
             pdf.clear();
@@ -1490,7 +1490,7 @@ void MainWindow::compareUpdateUi(const QPair<int, int> &pair,
             writeLine(tr("The PDFs appear to be the same."));
             const QString message(tr("<p style='font-size: x-large;"
                     "color: darkgreen'>"
-                    "DiffPDF: The PDFs appear to be the same.</p>"));
+                    "%1: The PDFs appear to be the same.</p>").arg(AboutForm::ProgramName));
             page1Label->setText(message);
             page2Label->setText(message);
         }
@@ -1614,17 +1614,17 @@ void MainWindow::save()
         QString header;
         const QChar bullet(0x2022);
         if (savePages == SaveLeftPages)
-            header = tr("DiffPDF %1 %2 %1 %3").arg(bullet)
+            header = tr("%4 %1 %2 %1 %3").arg(bullet)
                 .arg(filename1)
-                .arg(QDate::currentDate().toString(Qt::ISODate));
+                .arg(QDate::currentDate().toString(Qt::ISODate)).arg(AboutForm::ProgramName);
         else if (savePages == SaveRightPages)
-            header = tr("DiffPDF %1 %2 %1 %3").arg(bullet)
+            header = tr("%4 %1 %2 %1 %3").arg(bullet)
                 .arg(filename2)
-                .arg(QDate::currentDate().toString(Qt::ISODate));
+                .arg(QDate::currentDate().toString(Qt::ISODate)).arg(AboutForm::ProgramName);
         else
-            header = tr("DiffPDF %1 %2 vs. %3 %1 %4").arg(bullet)
+            header = tr("%4 %1 %2 vs. %3 %1 %4").arg(bullet)
                 .arg(filename1).arg(filename2)
-                .arg(QDate::currentDate().toString(Qt::ISODate));
+                .arg(QDate::currentDate().toString(Qt::ISODate)).arg(AboutForm::ProgramName);
         if (saveFilename.toLower().endsWith(".pdf"))
             saveAsPdf(start, end, pdf1, pdf2, header);
         else
@@ -1694,7 +1694,7 @@ void MainWindow::saveAsPdf( const int start, const int end,
     printer.setOutputFileName(saveFilename);
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setColorMode(QPrinter::Color);
-    printer.setCreator(tr("DiffPDF"));
+    printer.setCreator(AboutForm::ProgramName);
     printer.setOrientation(savePages == SaveBothPages
             ? QPrinter::Landscape : QPrinter::Portrait);
     QPainter painter(&printer);
@@ -1939,7 +1939,7 @@ void MainWindow::setStatusLabel(const QString &text)
 
 void MainWindow::messageBox(const QString &text)
 {
-    QMessageBox::warning(this, tr("DiffPDF — Error"), text );
+    QMessageBox::warning(this, tr("%1 — Error").arg(AboutForm::ProgramName), text );
 }
 
 /*

@@ -20,7 +20,6 @@
 #ifdef DEBUG
 #include <QtDebug>
 #endif
-#include <QCoreApplication>
 #include <QDir>
 #include <QEvent>
 #include <QLabel>
@@ -32,6 +31,7 @@
 #include <QUrl>
 #include <QXmlStreamWriter>
 #include <QBuffer>
+#include "aboutform.hpp"
 
 BatchCompare::BatchCompare(const Debug debug,
         const InitialComparisonMode comparisonMode,
@@ -518,9 +518,9 @@ void BatchCompare::saveResultsBatch(Status *status, CompareResults &results, con
     int end = results.count();
     QString header;
     const QChar bullet(0x2022);
-    header = tr("DiffPDF %1 %2 vs. %3 %1 %4").arg(bullet)
+    header = tr("%5 %1 %2 vs. %3 %1 %4").arg(bullet)
         .arg(_startupParameters->file1()).arg(_startupParameters->file2())
-        .arg(QDateTime::currentDateTime().toString(Qt::ISODate));
+        .arg(QDateTime::currentDateTime().toString(Qt::ISODate)).arg(AboutForm::ProgramName);
     saveAsPdfBatch( status, results, _startupParameters->pdfDiffFilePath(), start, end, pdf1, pdf2, header);
 }
 
@@ -533,7 +533,7 @@ void BatchCompare::saveAsPdfBatch(Status *status, CompareResults &results,
     printer.setOutputFileName(outputFile);
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setColorMode(QPrinter::Color);
-    printer.setCreator(tr("DiffPDF"));
+    printer.setCreator(AboutForm::ProgramName);
     printer.setOrientation(savePages == SaveBothPages
             ? QPrinter::Landscape : QPrinter::Portrait);
     QPainter painter(&printer);
@@ -637,7 +637,7 @@ const QPair<QPixmap, QPixmap> BatchCompare::populatePixmaps(
         QImage image1 = page1->renderToImage(DPI, DPI);
         QImage image2 = page2->renderToImage(DPI, DPI);
 
-        if (compareText || (-1 == static_cast<QPainter::CompositionMode>(compositionMode) ) ) {
+        if (compareText || (-1 == static_cast<int>(compositionMode)) ) {
             QPainterPath highlighted1;
             QPainterPath highlighted2;
             if (hasVisualDifference || !compareText)
@@ -655,7 +655,7 @@ const QPair<QPixmap, QPixmap> BatchCompare::populatePixmaps(
                 font.setOverline(true);
                 font.setUnderline(true);
                 highlighted1.addText(DPI / 4, DPI / 4, font,
-                    tr("DiffPDF: False Positive"));
+                    tr("%1: False Positive").arg(AboutForm::ProgramName));
                 paintOnImage(highlighted1, &image1);
             }
             pixmap1 = QPixmap::fromImage(image1);

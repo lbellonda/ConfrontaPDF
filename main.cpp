@@ -19,6 +19,7 @@
 #include <QTextCodec>
 #include <QTextStream>
 #include <QTranslator>
+#include "aboutform.hpp"
 #include "batchcompare.h"
 #include "commandlinemanager.h"
 
@@ -29,9 +30,9 @@ int main(int argc, char *argv[])
 #ifdef Q_WS_MAC
     app.setCursorFlashTime(0);
 #endif
-    app.setOrganizationName("Qtrac Ltd.");
-    app.setOrganizationDomain("qtrac.eu");
-    app.setApplicationName("DiffPDF");
+    app.setOrganizationName("ConfrontaPDF");
+    app.setOrganizationDomain("ConfrontaPDF");
+    app.setApplicationName(AboutForm::ProgramName);
     app.setWindowIcon(QIcon(":/icon.png"));
 #if !defined(USE_QT5)
     QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
@@ -51,6 +52,10 @@ int main(int argc, char *argv[])
     Status status ;
     bool seenCompareType = false;
     QStringList errors;
+
+#ifdef  COMPARA_IS_CONSOLE
+    startupParameters.setIsBatch(true);
+#endif
     foreach (const QString arg, args) {
         if (optionsOK && (arg == "--appearance" || arg == "-a")) {
             comparisonMode = CompareAppearance;
@@ -64,8 +69,8 @@ int main(int argc, char *argv[])
         } else if (optionsOK && arg.startsWith(LanguageOption))
             language = arg.mid(LanguageOption.length());
         else if (optionsOK && (arg == "--help" || arg == "-h")) {
-            out << "usage: diffpdf [options] [file1.pdf [file2.pdf]]\n\n"
-                "A GUI program that compares two PDF files and shows "
+            out << "usage: confrontapdf [options] [file1.pdf [file2.pdf]]\n\n"
+                "A program that compares two PDF files and shows "
                 "their differences.\n"
                 "\nThe files are optional and are normally set "
                 "through the user interface.\n\n"
@@ -131,7 +136,7 @@ int main(int argc, char *argv[])
             QLibraryInfo::location(QLibraryInfo::TranslationsPath));
         app.installTranslator(&qtTranslator);
         QTranslator appTranslator;
-        appTranslator.load("diffpdf_" + language, ":/");
+        appTranslator.load("confrontapdf_" + language, ":/");
         app.installTranslator(&appTranslator);
     }
 
@@ -157,6 +162,7 @@ int main(int argc, char *argv[])
                 language.left(2), &startupParameters, &status ); // We want de not de_DE etc.
         window.show();
         app.exec();
+        return 0;
     } else {
         if( !startupParameters.validate(&status) ) {
             return status.returnOp(startupParameters.returnType(), &startupParameters);
@@ -166,5 +172,4 @@ int main(int argc, char *argv[])
         manager.batchOperation();
         return status.returnOp(startupParameters.returnType(), &startupParameters, manager.getCompare() );
     }
-    return 0;
 }

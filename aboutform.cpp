@@ -19,9 +19,12 @@
 #include <QTabWidget>
 #include <QTextBrowser>
 
-
-const QString AboutForm::Version("2.1.3c");
-
+const QString AboutForm::Version("1.0.0");
+#ifdef  COMPARA_IS_CONSOLE
+const QString AboutForm::ProgramName("ConfrontaPDF");
+#else
+const QString AboutForm::ProgramName("ConfrontaPDFc");
+#endif
 
 AboutForm::AboutForm(QWidget *parent) : QDialog(parent)
 {
@@ -106,5 +109,5 @@ AboutForm::AboutForm(QWidget *parent) : QDialog(parent)
     layout->addWidget(tabWidget);
     setLayout(layout);
     resize(480, 400);
-    setWindowTitle(tr("%1 — About").arg(qApp->applicationName()));
+    setWindowTitle(tr("%1 — About").arg(AboutForm::ProgramName));
 }

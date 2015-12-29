@@ -1,6 +1,7 @@
-<h2><font color="darkgreen">DiffPDF</font></h2>
+<h2><font color="darkgreen">ConfrontaPDF/ConfrontaPDFc</font></h2>
 
 <ul>
+<li><a href="#cli">Command Line Usage</a></li>
 <li><a href="#bas">Basic Usage</a></li>
 <li><a href="#cmp">The Compare Button</a></li>
 <li><a href="#txt">Words Comparison Mode</a></li>
@@ -12,12 +13,12 @@
 <li><a href="#sav">Saving</a></li>
 <li><a href="#opt">The Options Dialog</a></li>
 <li><a href="#dock">Dock Windows</a></li>
-<li><a href="#cli">Command Line Usage</a></li>
 </ul>
 
-This tool can be used via command line or as a GUI program
+This tool can be used via command line or as a GUI program.
+<br/>ConfrontaPDFc is optimized for command line processing on Windows and operates without GUI.
 
-<h3 id="bas">Basic Usage</h3>
+<h3 id="bas">GUI Basic Usage</h3>
 <p>Click the <b>File #1</b> button to choose one PDF file and then
 the <b>File #2</b> button to choose another (ideally very similar) PDF
 file, then click the <b>Compare</b> button to perform the comparison,
@@ -25,14 +26,14 @@ and when that's finished, navigate through the pairs of differing pages
 using the <b>View</b> combobox or using the <b>Previous</b> and
 <b>Next</b> buttons. Alternatively, drag two files&mdash;either
 separately or together&mdash;and drop them onto <font
-color="darkgreen">DiffPDF</font>'s view panels, then click the
+color="darkgreen">ConfrontaPDF</font>'s view panels, then click the
 <b>Compare</b> button.
 
 <h3 id="cmp">The Compare Button</h3>
 <p>When the <b>Compare</b> button is pressed, <font
-color="darkgreen">DiffPDF</font> does a high-speed scan of every pair of
+color="darkgreen">ConfrontaPDF</font> does a high-speed scan of every pair of
 pages (~100 pairs of pages per second on the author's machine). To make
-the scan as fast as possible <font color="darkgreen">DiffPDF</font> does
+the scan as fast as possible <font color="darkgreen">ConfrontaPDF</font> does
 a very rough check of each pair of pages&mdash;so it is possible that it
 identifies some false positives (i.e., page pairs that are really the
 same). False positives are quite rare. (There are no false
@@ -92,18 +93,18 @@ and a word at position (452,137) is followed by a superscript at
 (468,140), both will be treated as having a <i>y</i> coordinate of 140.
 
 <h3 id="ran">Page Ranges</h3>
-<p>By default <font color="darkgreen">DiffPDF</font> compares every pair
+<p>By default <font color="darkgreen">ConfrontaPDF</font> compares every pair
 of pages in the two PDFs (or as many pairs of pages as the number of
 pages in the shorter PDF). It is also possible to compare
 particular pages or page ranges. For example, if there are two versions
 of a PDF file, one with pages 1-12 and the other with pages 1-13 because
 of an extra page having been added as page 4, they can be compared by
 specifying two page ranges, 1-12 for the first and 1-3, 5-13 for the
-second. This will make DiffPDF compare pages in the pairs (1, 1), (2,
+second. This will make ConfrontaPDF compare pages in the pairs (1, 1), (2,
 2), (3, 3), (4, 5), (5, 6), and so on, to (12, 13).
 
 <h3 id="mar">Margins</h3>
-<p>It is possible to make <font color="darkgreen">DiffPDF</font> ignore
+<p>It is possible to make <font color="darkgreen">ConfrontaPDF</font> ignore
 any text that is above a specified top margin, below a specified bottom
 margin, left of a specified left margin, and right of a specified right
 margin. One or more of these margins can be specified by, first,
@@ -138,24 +139,24 @@ views may be shown tabbed: if there is enough space they can be dragged
 out of their tabs and all shown in full.
 
 <h3 id="cli">Command Line Usage</h3>
-<p><font color="darkgreen">DiffPDF</font> can be run from a console in two modes:
+<p><font color="darkgreen">ConfrontaPDF</font> can be run from a console in two modes:
 <ul>
 <li>batch for automating checks, without GUI</li>
 <li>opening the GUI and comparing files</li>
 </ul>
 files listed on the command line, 
-<font color="darkgreen">DiffPDF</font> will start up and 
+<font color="darkgreen">ConfrontaPDF</font> will start up and
 immediately compare them in Words mode, or in Appearance mode 
 if their names are preceded with <tt>-a</tt> or 
 <tt>--appearance</tt> on the command line, 
 or in Characters mode if their names are preceded with <tt>-c</tt> or 
 <tt>--character</tt> on the command line. Run 
-<font color="darkgreen">DiffPDF</font> with <tt>--help</tt> to see all
+<font color="darkgreen">ConfrontaPDF </font> with <tt>--help</tt> to see all
 the command line options. (This won't work on Windows, although the
 other command line options will.) Here is the <tt>--help</tt>
 output:
 <pre>
-usage: diffpdf [options] [file1.pdf [file2.pdf]]
+usage: confrontapdf [options] [file1.pdf [file2.pdf]]
 
 A GUI program that compares two PDF files and shows
 their differences that can be scripted.
@@ -193,7 +194,11 @@ options:
 A typical command line for automated checks is:
 
 <pre>
-diff[df -b --pdfdiff=file_diff.pdf --xmlResult=file_results.xml --key=opkey file1.pdf file2.pdf
+confrontapdf -b --pdfdiff=file_diff.pdf --xmlResult=file_results.xml --key=opkey file1.pdf file2.pdf
+</pre>
+or:
+<pre>
+confrontapdfc -b --pdfdiff=file_diff.pdf --xmlResult=file_results.xml --key=opkey file1.pdf file2.pdf
 </pre>
 
 Return codes when invoked in batch:
@@ -213,7 +218,7 @@ Return codes when invoked in batch:
 <li>-6: error writing the PDF difference file</li>
 <li>-7: error writing the XML results file</li>
 <li>-8: error loading a document</li>
-<ul>
+</ul>
 
 <p>
 The text reordering is done by the
@@ -222,7 +227,17 @@ The text reordering is done by the
 (Note that when using <tt>--debug3</tt> coordinates are output in
 <i>y</i>, <i>x</i> order.)
 
+<p>
+This project is a fork of DiffPDF, that was created and maintained by Mark
+Summerfield 2008-2013. This fork, by Luca Bellonda &lt;lbellonda@gmail.com&gt;, begun in 2015.
+
+The source for the last release of Mark's open source version is
+available from: <a href="http://www.qtrac.eu/diffpdf-foss.html">http://www.qtrac.eu/diffpdf-foss.html</a>
+
+And Mark's commercial versions are available from:
+<a href="http://www.qtrac.eu/diffpdf.html">http://www.qtrac.eu/diffpdf.html</a>
+
 <p>If you're specifically looking for a command line PDF comparison 
-tool, e.g., for automated testing, try 
+tool, e.g., for automated testing, by Mark Summerfield try:
 <a href="http://www.qtrac.eu/comparepdf.html">comparepdf</a>.
 

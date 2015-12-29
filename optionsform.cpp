@@ -12,6 +12,7 @@
 
 #include "generic.hpp"
 #include "optionsform.hpp"
+#include "aboutform.hpp"
 #include <QCheckBox>
 #include <QColor>
 #include <QComboBox>
@@ -42,7 +43,7 @@ OptionsForm::OptionsForm(QPen *pen, QBrush *brush, qreal *ruleWidth,
 
     updateSwatches();
     updateUi();
-    setWindowTitle(tr("DiffPDF — Options"));
+    setWindowTitle(tr("%1 — Options").arg(AboutForm::ProgramName));
 }
 
 

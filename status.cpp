@@ -184,6 +184,7 @@ int Status::returnOp(const EReturnType retType, StartupParameters *params, Batch
             qint64 msecs = params->startTime().msecsTo(now);
             stream.writeAttribute("durationInSec", QString::number((((double)msecs)/1000.0)));
             stream.writeAttribute("swVersion", AboutForm::Version);
+            stream.writeAttribute("xmlResultFile", params->XMLResultFilePath());
             stream.writeEndElement(); // run
 
             if( NULL != compare ) {

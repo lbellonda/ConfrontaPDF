@@ -76,20 +76,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF %1 %2 vs. %3 %1 %4</source>
-        <translation type="unfinished">DiffPDF %1 %2 vs. %3 %1 %4</translation>
+        <source>ConfrontaPDF %1 %2 vs. %3 %1 %4</source>
+        <translation type="obsolete">ConfrontaPDF %1 %2 vs. %3 %1 %4</translation>
     </message>
     <message>
-        <source>DiffPDF</source>
-        <translation type="unfinished">DiffPDF</translation>
+        <source>ConfrontaPDF</source>
+        <translation type="obsolete">ConfrontaPDF</translation>
     </message>
     <message>
         <source>error while writing differences file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF: False Positive</source>
-        <translation type="unfinished">DiffPDF : Faux positif</translation>
+        <source>ConfrontaPDF: False Positive</source>
+        <translation type="obsolete">ConfrontaPDF : Faux positif</translation>
+    </message>
+    <message>
+        <source>%5 %1 %2 vs. %3 %1 %4</source>
+        <translation type="unfinished">%1 vs. %3 %1 %4 {5 %1 %2 ?}</translation>
+    </message>
+    <message>
+        <source>%1: False Positive</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -110,8 +118,8 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <source>DiffPDF</source>
-        <translation>DiffPDF</translation>
+        <source>ConfrontaPDF</source>
+        <translation type="obsolete">ConfrontaPDF</translation>
     </message>
     <message>
         <source>File #&amp;1...</source>
@@ -250,8 +258,8 @@
         <translation>Co&amp;lonnes :</translation>
     </message>
     <message>
-        <source>&lt;p&gt;Use this to tell DiffPDF how many columns the page has; this should improve the zoning.</source>
-        <translation>&lt;p&gt;Indique à DiffPDF combien de colonnes sont visibles sur la page ; cela améliore le découpage par zones.</translation>
+        <source>&lt;p&gt;Use this to tell ConfrontaPDF how many columns the page has; this should improve the zoning.</source>
+        <translation type="obsolete">&lt;p&gt;Indique à ConfrontaPDF combien de colonnes sont visibles sur la page ; cela améliore le découpage par zones.</translation>
     </message>
     <message>
         <source>Tolerance/&amp;R:</source>
@@ -394,52 +402,52 @@
         <translation>Messages</translation>
     </message>
     <message>
-        <source>DiffPDF ? Controls</source>
-        <translation type="obsolete">DiffPDF — Contrôles</translation>
+        <source>ConfrontaPDF ? Controls</source>
+        <translation type="obsolete">ConfrontaPDF — Contrôles</translation>
     </message>
     <message>
-        <source>DiffPDF ? Actions</source>
-        <translation type="obsolete">DiffPDF — Actions</translation>
+        <source>ConfrontaPDF ? Actions</source>
+        <translation type="obsolete">ConfrontaPDF — Actions</translation>
     </message>
     <message>
-        <source>DiffPDF ? Zoning</source>
-        <translation type="obsolete">DiffPDF — Découpage par zones</translation>
+        <source>ConfrontaPDF ? Zoning</source>
+        <translation type="obsolete">ConfrontaPDF — Découpage par zones</translation>
     </message>
     <message>
-        <source>DiffPDF ? Margins</source>
-        <translation type="obsolete">DiffPDF — Marges</translation>
+        <source>ConfrontaPDF ? Margins</source>
+        <translation type="obsolete">ConfrontaPDF — Marges</translation>
     </message>
     <message>
-        <source>DiffPDF ? Log</source>
-        <translation type="obsolete">DiffPDF — Messages</translation>
+        <source>ConfrontaPDF ? Log</source>
+        <translation type="obsolete">ConfrontaPDF — Messages</translation>
     </message>
     <message>
-        <source>DiffPDF: False Positive</source>
-        <translation>DiffPDF : Faux positif</translation>
+        <source>ConfrontaPDF: False Positive</source>
+        <translation type="obsolete">ConfrontaPDF : Faux positif</translation>
     </message>
     <message>
-        <source>DiffPDF ? Choose File #1</source>
-        <translation type="obsolete">DiffPDF — Choisir fichier #1</translation>
+        <source>ConfrontaPDF ? Choose File #1</source>
+        <translation type="obsolete">ConfrontaPDF — Choisir fichier #1</translation>
     </message>
     <message>
         <source>PDF files (*.pdf)</source>
         <translation>Fichiers PDF (*.pdf)</translation>
     </message>
     <message>
-        <source>DiffPDF ? Error</source>
-        <translation type="obsolete">DiffPDF — Erreur</translation>
+        <source>ConfrontaPDF ? Error</source>
+        <translation type="obsolete">ConfrontaPDF — Erreur</translation>
     </message>
     <message>
         <source>Cannot compare a file to itself.</source>
         <translation>Il n&apos;est pas possible de comparer un fichier à lui-même.</translation>
     </message>
     <message>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Cliquez sur Comparer&lt;br&gt; ou changez le fichier #2.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Cliquez sur Comparer&lt;br&gt; ou changez le fichier #2.&lt;/p&gt;</translation>
     </message>
     <message>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Choose File #2.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF : Choisissez le fichier #2.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Choose File #2.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF : Choisissez le fichier #2.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>1-%1</source>
@@ -454,16 +462,16 @@
         <translation>Prêt à comparer</translation>
     </message>
     <message>
-        <source>DiffPDF ? Choose File #2</source>
-        <translation type="obsolete">DiffPDF — Choisissez fichier #2</translation>
+        <source>ConfrontaPDF ? Choose File #2</source>
+        <translation type="obsolete">ConfrontaPDF — Choisissez fichier #2</translation>
     </message>
     <message>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF : Cliquez sur Comparer&lt;br&gt;ou modifiez le fichier #1.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF : Cliquez sur Comparer&lt;br&gt;ou modifiez le fichier #1.&lt;/p&gt;</translation>
     </message>
     <message>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Choose File #1.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF : Choisissez fichier #1.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Choose File #1.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF : Choisissez fichier #1.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Choose first file</source>
@@ -562,8 +570,8 @@
         <translation>Les fichiers PDFs semblent identiques.</translation>
     </message>
     <message>
-        <source>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;DiffPDF: The PDFs appear to be the same.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: x-large;color: dargreen&apos;&gt;DiffPDF : les fichiers PDFs semblent être identiques.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;ConfrontaPDF: The PDFs appear to be the same.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p style=&apos;font-size: x-large;color: dargreen&apos;&gt;ConfrontaPDF : les fichiers PDFs semblent être identiques.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>1 differs %1/%2 compared</source>
@@ -578,12 +586,12 @@
         <translation type="obsolete">%1 diffère de %2 %3/%4 ont été comparées</translation>
     </message>
     <message>
-        <source>DiffPDF %1 %2 %1 %3</source>
-        <translation>DiffPDF %1 %2 %1 %3</translation>
+        <source>ConfrontaPDF %1 %2 %1 %3</source>
+        <translation type="obsolete">ConfrontaPDF %1 %2 %1 %3</translation>
     </message>
     <message>
-        <source>DiffPDF %1 %2 vs. %3 %1 %4</source>
-        <translation>DiffPDF %1 %2 vs. %3 %1 %4</translation>
+        <source>ConfrontaPDF %1 %2 vs. %3 %1 %4</source>
+        <translation type="obsolete">ConfrontaPDF %1 %2 vs. %3 %1 %4</translation>
     </message>
     <message>
         <source>Saved %1</source>
@@ -594,43 +602,79 @@
         <translation>Echec dans l&apos;enregistrement %1</translation>
     </message>
     <message>
-        <source>DiffPDF — Controls</source>
+        <source>&lt;p&gt;Use this to tell %1 how many columns the page has; this should improve the zoning.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF — Actions</source>
+        <source>%1 — Controls</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF — Zoning</source>
+        <source>%1 — Actions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF — Margins</source>
+        <source>%1 — Zoning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF — Log</source>
+        <source>%1 — Margins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF — Choose File #1</source>
+        <source>%1 — Log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF — Error</source>
+        <source>%1: False Positive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF — Choose File #2</source>
+        <source>%1 — Choose File #1</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 — Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Choose File #2.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 — Choose File #2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Choose File #1.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;%1: The PDFs appear to be the same.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%4 %1 %2 %1 %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%4 %1 %2 vs. %3 %1 %4</source>
+        <translation type="unfinished">%1 vs. %3 %1 %4 {4 %1 %2 ?}</translation>
     </message>
 </context>
 <context>
     <name>OptionsForm</name>
     <message>
-        <source>DiffPDF ? Options</source>
-        <translation type="obsolete">DiffPDF — Options</translation>
+        <source>ConfrontaPDF ? Options</source>
+        <translation type="obsolete">ConfrontaPDF — Options</translation>
     </message>
     <message>
         <source>No Brush</source>
@@ -770,7 +814,7 @@
     </message>
     <message>
         <source>&lt;p&gt;The outline and fill are used to highlight differences using a semi-transparent version of the base color. The margin rules are painted using the base color  and indicate where changes are. Set the rule width to 0.0 to switch the rules off. If combining highlighting is checked it will try to merge the highlighting of adjacent text differences.</source>
-        <translation>&lt;p&gt;Le contour et le remplissage sont utilisés pour mettre en évidence des différences en utilisant une version semi-transparente de la couleur de base. Les règles des marges sont peintes avec la couleur de base(sp)(sp)et indiquent l&apos;emplacement des changements. Choisissez une largeur des règles de 0.0 pour désactiver les règles. Si l&apos;option &apos;Combiner les surlignages adjacents&apos; est sélectionnée, DiffPDF essayera de fusionner les surlignages correspondant à des différences textuelles adjacentes.</translation>
+        <translation>&lt;p&gt;Le contour et le remplissage sont utilisés pour mettre en évidence des différences en utilisant une version semi-transparente de la couleur de base. Les règles des marges sont peintes avec la couleur de base(sp)(sp)et indiquent l&apos;emplacement des changements. Choisissez une largeur des règles de 0.0 pour désactiver les règles. Si l&apos;option &apos;Combiner les surlignages adjacents&apos; est sélectionnée, ConfrontaPDF essayera de fusionner les surlignages correspondant à des différences textuelles adjacentes.</translation>
     </message>
     <message>
         <source>&amp;Highlighting</source>
@@ -789,7 +833,7 @@
         <translation>&amp;Performance</translation>
     </message>
     <message>
-        <source>DiffPDF — Options</source>
+        <source>%1 — Options</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -847,8 +891,8 @@
 <context>
     <name>SaveForm</name>
     <message>
-        <source>DiffPDF ? Save As</source>
-        <translation type="obsolete">DiffPDF — Enregistrer sous</translation>
+        <source>ConfrontaPDF ? Save As</source>
+        <translation type="obsolete">ConfrontaPDF — Enregistrer sous</translation>
     </message>
     <message>
         <source>Pairs</source>
@@ -887,19 +931,19 @@
         <translation>Pa&amp;rcourir...</translation>
     </message>
     <message>
-        <source>DiffPDF ? Browse</source>
-        <translation type="obsolete">DiffPDF — Parcourir</translation>
+        <source>ConfrontaPDF ? Browse</source>
+        <translation type="obsolete">ConfrontaPDF — Parcourir</translation>
     </message>
     <message>
         <source>PDF files (*.pdf);;Image files (%1)</source>
         <translation>Fichiers PDF (*.pdf);;Fichiers images (%1)</translation>
     </message>
     <message>
-        <source>DiffPDF — Save As</source>
+        <source>%1 — Save As</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DiffPDF — Browse</source>
+        <source>%1 — Browse</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

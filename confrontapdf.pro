@@ -2,7 +2,7 @@
 # CHANGES
 # README
 # help.html
-# diffpdf.1
+# confrontapdf.1
 #DEFINES	     += DEBUG
 
 HEADERS	     += mainwindow.hpp \
@@ -41,10 +41,10 @@ SOURCES	     += lineedit.cpp
 HEADERS	     += label.hpp
 SOURCES	     += label.cpp
 RESOURCES    += resources.qrc
-TRANSLATIONS += diffpdf_cz.ts
-TRANSLATIONS += diffpdf_fr.ts
-TRANSLATIONS += diffpdf_de.ts
-TRANSLATIONS += diffpdf_es.ts
+TRANSLATIONS += confrontapdf_cz.ts
+TRANSLATIONS += confrontapdf_fr.ts
+TRANSLATIONS += confrontapdf_de.ts
+TRANSLATIONS += confrontapdf_es.ts
 CODECFORTR    = UTF-8
 
 greaterThan(QT_MAJOR_VERSION, 4) {
@@ -163,15 +163,11 @@ QMAKE_CXXFLAGS +=-Wall
 
 
 DESTDIR = build
-OBJECTS_DIR = build/obj
-MOC_DIR = build/moc
-UI_DIR = build/ui
-UI_HEADERS_DIR = buildui/include
-UI_SOURCES_DIR = buildui/src
-RCC_DIR = build/rcc
+OBJECTS_DIR = build/a/obj
+MOC_DIR = build/a/moc
+UI_DIR = build/a/ui
+UI_HEADERS_DIR = buildui/a/include
+UI_SOURCES_DIR = buildui/a/src
+RCC_DIR = build/a/rcc
 
 
-
-CONFIG   += console
-# this is questionable for command line app on macos
-#CONFIG   -= app_bundle

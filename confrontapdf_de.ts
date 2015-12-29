@@ -5,7 +5,7 @@
 <context>
     <name>AboutForm</name>
     <message>
-        <location filename="aboutform.cpp" line="31"/>
+        <location filename="aboutform.cpp" line="34"/>
         <source>&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; by Mark Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-13 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. All rights reserved.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Built with Qt %3 and Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;This program compares the text or the visual appearance of each page in two PDF files.&lt;p&gt;This version can be used in batch operations.&lt;hr&gt;&lt;p&gt;If you like %1 you might like my books:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;I also provide training and consultancy in C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, and PyQt4.</source>
         <oldsource>&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; by Mark Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-13 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. All rights reserved.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Built with Qt %3 and Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;This program compares the text or the visual appearance of each page in two PDF files.&lt;hr&gt;&lt;p&gt;If you like %1 you might like my books:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;I also provide training and consultancy in C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, and PyQt4.</oldsource>
         <translation type="unfinished">&lt;table border=0&gt;&lt;tr&gt;&lt;td width=90%&gt;&lt;b&gt;%1&lt;/a&gt; %2&lt;/b&gt; von Mark Summerfield&lt;/td&gt;&lt;td rowspan=3&gt;&lt;img align=right src=&quot;:/icon.png&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;tt&gt;&amp;lt;mark@qtrac.eu&amp;gt;&lt;/tt&gt;.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Copyright &amp;copy; 2008-2013 &lt;a href=&quot;http://www.qtrac.eu&quot;&gt;Qtrac&lt;/a&gt; Ltd. All rights reserved.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=2&gt;Erzeugt mit Qt %3 und Poppler %4.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr&gt;&lt;p&gt;Dieses Programm vergleicht die Seiten von zwei PDF Dateien anhand der Texte oder der visuellen Unterschiede.&lt;hr&gt;&lt;p&gt;Wenn Ihnen %1 gefällt, dann haben Sie vielleicht auch Interesse an meinen Büchern:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/gobook.html&quot;&gt;Programming in Go&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/aqpbook.html&quot;&gt;Advanced Qt Programming&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/py3book.html&quot;&gt;Programming in Python 3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.qtrac.eu/pyqtbook.html&quot;&gt;Rapid GUI Programming with Python and Qt&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;Gerne stehe ich Ihnen auch als Trainer oder Berater für C++, Go, Python&amp;nbsp;2, Python&amp;nbsp;3, C++/Qt, und PyQt4 zur Verfügung.</translation>
@@ -16,32 +16,32 @@
         <translation type="obsolete">&lt;table&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=lightyellow&gt;&lt;i&gt;Anonyme Firma&lt;/i&gt; &amp;mdash; Sponsor für die Erweiterung Randbereiche auszuschließen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;David Paleino&lt;/b&gt; &amp;mdash; Debian packager&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Dirk Loss&lt;/b&gt; &amp;mdash; Erstellung des Programms für Mac&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Florian Heiderich &amp;mdash; schlug vor Kompositions-Modi zu verwenden um kleine Unterschiede anzuzeigen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Jasmin Blanchette&lt;/b&gt; &amp;mdash; Die ursprüngliche Idee und weitere Vorschläge&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Liviu Andronic &amp;mdash; schlug vor drag and drop hinzuzufügen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Paul Howarth &amp;mdash; Auf Basis seiner Vorschläge entstand der Zeichen-für-Zeichen Vergleichsmodus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pavel Fric&lt;/i&gt; &amp;mdash; Tschechische Übersetzung&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pierre-Alain&lt;/i&gt; Bandinelli&amp;mdash; Französische Übersetzung&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Rainer Krachten&lt;/i&gt; &amp;mdash; Deutsche Übersetzung und einige Vorschläge&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Rory Gordon &amp;mdash; schlug vor drag and drop hinzuzufügen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Steven Lee&lt;/b&gt; &amp;mdash; Erstellung des Programms für Windows&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="59"/>
+        <location filename="aboutform.cpp" line="62"/>
         <source>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=lightyellow&gt;&lt;i&gt;Anonymous Company&lt;/i&gt; &amp;mdash; funded the addition of the margin exclusion functionality&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;David Paleino&lt;/b&gt; &amp;mdash; Debian packager&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Dirk Loss&lt;/b&gt; &amp;mdash; creating Mac binaries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Florian Heiderich &amp;mdash; suggested using composition modes for showing subtle differences&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Jasmin Blanchette&lt;/b&gt; &amp;mdash; the original idea and subsequent suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Liviu Andronic &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Paul Howarth &amp;mdash; suggestions resulting in Characters mode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pavel Fric&lt;/i&gt; &amp;mdash; Czech translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Pierre-Alain Bandinelli&lt;/i&gt;&amp;mdash; French translation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td bgcolor=&quot;#F0F0F0&quot;&gt;&lt;i&gt;Rainer Krachten&lt;/i&gt; &amp;mdash; German translation and various suggestions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Rory Gordon &amp;mdash; suggested adding drag and drop&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;Bryan Huh &amp;mdash; subtle bug fix&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Steven Lee&lt;/b&gt; &amp;mdash; creating Windows binaries&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&amp;bull;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Luca Bellonda&lt;/b&gt; &amp;mdash; batch processing feature&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="91"/>
+        <location filename="aboutform.cpp" line="94"/>
         <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option), any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (in file &lt;tt&gt;gpl-2.0.txt&lt;/tt&gt;) for more details.</source>
         <translation>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option), any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License (in file &lt;tt&gt;gpl-2.0.txt&lt;/tt&gt;) for more details.</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="102"/>
+        <location filename="aboutform.cpp" line="105"/>
         <source>&amp;About</source>
         <translation>&amp;Info</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="103"/>
+        <location filename="aboutform.cpp" line="106"/>
         <source>&amp;Contributors</source>
         <translation>&amp;Mitwirkende</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="104"/>
+        <location filename="aboutform.cpp" line="107"/>
         <source>&amp;License</source>
         <translation>&amp;Lizenz</translation>
     </message>
     <message>
-        <location filename="aboutform.cpp" line="109"/>
+        <location filename="aboutform.cpp" line="112"/>
         <source>%1 — About</source>
         <translation>%1 — Info</translation>
     </message>
@@ -88,13 +88,13 @@
     </message>
     <message>
         <location filename="batchcompare.cpp" line="521"/>
-        <source>DiffPDF %1 %2 vs. %3 %1 %4</source>
-        <translation type="unfinished">DiffPDF %1 %2 mit %3 %1 %4</translation>
+        <source>%5 %1 %2 vs. %3 %1 %4</source>
+        <oldsource>ConfrontaPDF %1 %2 vs. %3 %1 %4</oldsource>
+        <translation type="unfinished">ConfrontaPDF %1 %2 mit %3 %1 %4</translation>
     </message>
     <message>
-        <location filename="batchcompare.cpp" line="536"/>
-        <source>DiffPDF</source>
-        <translation type="unfinished">DiffPDF</translation>
+        <source>ConfrontaPDF</source>
+        <translation type="obsolete">ConfrontaPDF</translation>
     </message>
     <message>
         <location filename="batchcompare.cpp" line="558"/>
@@ -104,8 +104,9 @@
     </message>
     <message>
         <location filename="batchcompare.cpp" line="658"/>
-        <source>DiffPDF: False Positive</source>
-        <translation type="unfinished">DiffPDF: Fehlerkennung</translation>
+        <source>%1: False Positive</source>
+        <oldsource>ConfrontaPDF: False Positive</oldsource>
+        <translation type="unfinished">ConfrontaPDF: Fehlerkennung</translation>
     </message>
 </context>
 <context>
@@ -126,10 +127,8 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.cpp" line="104"/>
-        <location filename="mainwindow.cpp" line="1697"/>
-        <source>DiffPDF</source>
-        <translation>DiffPDF</translation>
+        <source>ConfrontaPDF</source>
+        <translation type="obsolete">ConfrontaPDF</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="116"/>
@@ -306,8 +305,9 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="242"/>
-        <source>&lt;p&gt;Use this to tell DiffPDF how many columns the page has; this should improve the zoning.</source>
-        <translation>&lt;p&gt;Gibt an, in wie viele Spalten die Seite aufgeteilt ist; die Angabe erleichtert die Einteilung.</translation>
+        <source>&lt;p&gt;Use this to tell %1 how many columns the page has; this should improve the zoning.</source>
+        <oldsource>&lt;p&gt;Use this to tell ConfrontaPDF how many columns the page has; this should improve the zoning.</oldsource>
+        <translation type="unfinished">&lt;p&gt;Gibt an, in wie viele Spalten die Seite aufgeteilt ist; die Angabe erleichtert die Einteilung.</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="246"/>
@@ -491,38 +491,45 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="730"/>
-        <source>DiffPDF — Controls</source>
-        <translation>DiffPDF — Steuerung</translation>
+        <source>%1 — Controls</source>
+        <oldsource>ConfrontaPDF — Controls</oldsource>
+        <translation type="unfinished">ConfrontaPDF — Steuerung</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="742"/>
-        <source>DiffPDF — Actions</source>
-        <translation>DiffPDF — Aktionen</translation>
+        <source>%1 — Actions</source>
+        <oldsource>ConfrontaPDF — Actions</oldsource>
+        <translation type="unfinished">ConfrontaPDF — Aktionen</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="754"/>
-        <source>DiffPDF — Zoning</source>
-        <translation>DiffPDF — Einteilung (Zonen-Bildung)</translation>
+        <source>%1 — Zoning</source>
+        <oldsource>ConfrontaPDF — Zoning</oldsource>
+        <translation type="unfinished">ConfrontaPDF — Einteilung (Zonen-Bildung)</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="766"/>
-        <source>DiffPDF — Margins</source>
-        <translation>DiffPDF — Randbereich</translation>
+        <source>%1 — Margins</source>
+        <oldsource>ConfrontaPDF — Margins</oldsource>
+        <translation type="unfinished">ConfrontaPDF — Randbereich</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="773"/>
-        <source>DiffPDF — Log</source>
-        <translation>DiffPDF — Log</translation>
+        <source>%1 — Log</source>
+        <oldsource>ConfrontaPDF — Log</oldsource>
+        <translation type="unfinished">ConfrontaPDF — Log</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="919"/>
-        <source>DiffPDF: False Positive</source>
-        <translation>DiffPDF: Fehlerkennung</translation>
+        <source>%1: False Positive</source>
+        <oldsource>ConfrontaPDF: False Positive</oldsource>
+        <translation type="unfinished">ConfrontaPDF: Fehlerkennung</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1187"/>
-        <source>DiffPDF — Choose File #1</source>
-        <translation>DiffPDF — Bitte Datei #1 auswählen</translation>
+        <source>%1 — Choose File #1</source>
+        <oldsource>ConfrontaPDF — Choose File #1</oldsource>
+        <translation type="unfinished">ConfrontaPDF — Bitte Datei #1 auswählen</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1188"/>
@@ -536,8 +543,9 @@
         <location filename="mainwindow.cpp" line="1256"/>
         <location filename="mainwindow.cpp" line="1259"/>
         <location filename="mainwindow.cpp" line="1942"/>
-        <source>DiffPDF — Error</source>
-        <translation>DiffPDF — Fehler</translation>
+        <source>%1 — Error</source>
+        <oldsource>ConfrontaPDF — Error</oldsource>
+        <translation type="unfinished">ConfrontaPDF — Fehler</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1192"/>
@@ -547,13 +555,15 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1197"/>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Bitte Schaltfläche &quot;Vergleichen&quot; drücken&lt;br&gt;oder Datei #2 ändern.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Click Compare&lt;br&gt;or change File #2.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Bitte Schaltfläche &quot;Vergleichen&quot; drücken&lt;br&gt;oder Datei #2 ändern.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1201"/>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Choose File #2.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Bitte Datei #2 auswählen.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Choose File #2.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Choose File #2.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Bitte Datei #2 auswählen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1206"/>
@@ -575,18 +585,21 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1221"/>
-        <source>DiffPDF — Choose File #2</source>
-        <translation>DiffPDF — Bitte Datei #2 auswählen</translation>
+        <source>%1 — Choose File #2</source>
+        <oldsource>ConfrontaPDF — Choose File #2</oldsource>
+        <translation type="unfinished">ConfrontaPDF — Bitte Datei #2 auswählen</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1231"/>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Bitte Schaltfläche &quot;Vergleichen&quot; drücken&lt;br&gt;oder Datei #1 ändern.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Click Compare&lt;br&gt;or change File #1.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Bitte Schaltfläche &quot;Vergleichen&quot; drücken&lt;br&gt;oder Datei #1 ändern.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1235"/>
-        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Choose File #1.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;DiffPDF: Bitte Datei #1 auswählen.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;%1: Choose File #1.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Choose File #1.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: xx-large;color: darkgreen&apos;&gt;ConfrontaPDF: Bitte Datei #1 auswählen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1244"/>
@@ -717,8 +730,9 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1491"/>
-        <source>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;DiffPDF: The PDFs appear to be the same.&lt;/p&gt;</source>
-        <translation>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;DiffPDF: Die PDF-Dateien scheinen gleich zu sein.&lt;/p&gt;</translation>
+        <source>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;%1: The PDFs appear to be the same.&lt;/p&gt;</source>
+        <oldsource>&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;ConfrontaPDF: The PDFs appear to be the same.&lt;/p&gt;</oldsource>
+        <translation type="unfinished">&lt;p style=&apos;font-size: x-large;color: darkgreen&apos;&gt;ConfrontaPDF: Die PDF-Dateien scheinen gleich zu sein.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1501"/>
@@ -740,15 +754,17 @@
     <message>
         <location filename="mainwindow.cpp" line="1617"/>
         <location filename="mainwindow.cpp" line="1621"/>
-        <source>DiffPDF %1 %2 %1 %3</source>
+        <source>%4 %1 %2 %1 %3</source>
+        <oldsource>ConfrontaPDF %1 %2 %1 %3</oldsource>
         <translatorcomment>Appears in the saved pdf file. %1 is a bullet, %2 the filename, %3 is the date</translatorcomment>
-        <translation>DiffPDF %1 %2 %1 %3</translation>
+        <translation type="unfinished">ConfrontaPDF %1 %2 %1 %3</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1625"/>
-        <source>DiffPDF %1 %2 vs. %3 %1 %4</source>
+        <source>%4 %1 %2 vs. %3 %1 %4</source>
+        <oldsource>ConfrontaPDF %1 %2 vs. %3 %1 %4</oldsource>
         <translatorcomment>No clue what this means or where it apperas.</translatorcomment>
-        <translation>DiffPDF %1 %2 mit %3 %1 %4</translation>
+        <translation type="unfinished">ConfrontaPDF %1 %2 mit %3 %1 %4</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="1634"/>
@@ -765,203 +781,207 @@
 <context>
     <name>OptionsForm</name>
     <message>
-        <location filename="optionsform.cpp" line="45"/>
-        <source>DiffPDF — Options</source>
-        <translation>DiffPDF — Optionen</translation>
+        <source>ConfrontaPDF — Options</source>
+        <translation type="obsolete">ConfrontaPDF — Optionen</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="64"/>
+        <location filename="optionsform.cpp" line="46"/>
+        <source>%1 — Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="optionsform.cpp" line="65"/>
         <source>No Brush</source>
         <translation>Ohne</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="65"/>
-        <location filename="optionsform.cpp" line="87"/>
+        <location filename="optionsform.cpp" line="66"/>
+        <location filename="optionsform.cpp" line="88"/>
         <source>Solid</source>
         <translation>Voll</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="66"/>
+        <location filename="optionsform.cpp" line="67"/>
         <source>Dense #1</source>
         <translation>Stärke #1</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="67"/>
+        <location filename="optionsform.cpp" line="68"/>
         <source>Dense #2</source>
         <translation>Stärke #2</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="68"/>
+        <location filename="optionsform.cpp" line="69"/>
         <source>Dense #3</source>
         <translation>Stärke #3</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="69"/>
+        <location filename="optionsform.cpp" line="70"/>
         <source>Dense #4</source>
         <translation>Stärke #4</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="70"/>
+        <location filename="optionsform.cpp" line="71"/>
         <source>Dense #5</source>
         <translation>Stärke #5</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="71"/>
+        <location filename="optionsform.cpp" line="72"/>
         <source>Dense #6</source>
         <translation>Stärke #6</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="72"/>
+        <location filename="optionsform.cpp" line="73"/>
         <source>Horizontal</source>
         <translation>Horizontal</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="73"/>
+        <location filename="optionsform.cpp" line="74"/>
         <source>Vertical</source>
         <translation>Vertikal</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="74"/>
+        <location filename="optionsform.cpp" line="75"/>
         <source>Cross</source>
         <translation>Kästchen</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="75"/>
+        <location filename="optionsform.cpp" line="76"/>
         <source>Diagonal /</source>
         <translation>Diagonal /</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="76"/>
+        <location filename="optionsform.cpp" line="77"/>
         <source>Diagonal \</source>
         <translation>Diagonal \</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="77"/>
+        <location filename="optionsform.cpp" line="78"/>
         <source>Diagonal Cross</source>
         <translation>Rauten</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="86"/>
+        <location filename="optionsform.cpp" line="87"/>
         <source>No Pen</source>
         <translation>Keine</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="88"/>
+        <location filename="optionsform.cpp" line="89"/>
         <source>Dashed</source>
         <translation>Striche</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="89"/>
+        <location filename="optionsform.cpp" line="90"/>
         <source>Dotted</source>
         <translation>Punkte</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="90"/>
+        <location filename="optionsform.cpp" line="91"/>
         <source>Dash-Dotted</source>
         <translation>Strich-Punkt-Strich</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="91"/>
+        <location filename="optionsform.cpp" line="92"/>
         <source>Dash-Dot-Dotted</source>
         <translation>Strich-Punkt-Punkt</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="100"/>
+        <location filename="optionsform.cpp" line="101"/>
         <source> %</source>
         <translation>%</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="102"/>
+        <location filename="optionsform.cpp" line="103"/>
         <source>&lt;p&gt;How opaque the highlighting color is. The default is 13%</source>
         <translation>&lt;p&gt;Deckungsgrad der Hervorhebungsfarbe. Standard ist 13%</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="108"/>
+        <location filename="optionsform.cpp" line="109"/>
         <source> px</source>
         <translation>px</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="110"/>
+        <location filename="optionsform.cpp" line="111"/>
         <source>&lt;p&gt;The size of the highlighting squares in Appearance mode. Small values are more expensive to compute. Large values give coarse comparisons. The default is 10 px</source>
         <translation>&lt;p&gt;Größe der Vergleichsbereiche beim visuellen Vergleich. Kleine Werte sind rechenintensiver. Große Werte bewirken ungenauere Ergebnisse. Der Standard ist 10 px</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="120"/>
+        <location filename="optionsform.cpp" line="121"/>
         <source>No Rules</source>
         <translation>Keine Randmarker</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="123"/>
+        <location filename="optionsform.cpp" line="124"/>
         <source>Show &amp;Tooltips in the Main Window</source>
         <translation>Zeige &amp;Hinweise im Hauptfenster</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="128"/>
+        <location filename="optionsform.cpp" line="129"/>
         <source>Combine Highlighting in &amp;Text Modes</source>
         <translation>&amp;Hervorhebungen beim Textvergleich zusammenfassen</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="135"/>
+        <location filename="optionsform.cpp" line="136"/>
         <source> MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="136"/>
+        <location filename="optionsform.cpp" line="137"/>
         <source>&lt;p&gt;The cache is used to store pages already seen to make flipping back and forth as fast as possible. The bigger the cache the more pages that can be stored.</source>
         <translation>&lt;p&gt;Der Cache hält bereits angezeigte Seiten vor, um den Wechsel zwischen Seiten zu beschleunigen. Bei größerem Cache können mehr Seiten vorgehalten werden.</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="151"/>
+        <location filename="optionsform.cpp" line="152"/>
         <source>&amp;Rule width:</source>
         <translation>&amp;Randmarker:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="154"/>
+        <location filename="optionsform.cpp" line="155"/>
         <source>&amp;General</source>
         <translation>&amp;Allgemein</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="157"/>
+        <location filename="optionsform.cpp" line="158"/>
         <source>&amp;Base Color:</source>
         <translation>&amp;Basisfarbe:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="158"/>
+        <location filename="optionsform.cpp" line="159"/>
         <source>O&amp;utline:</source>
         <translation>&amp;Rahmen:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="159"/>
+        <location filename="optionsform.cpp" line="160"/>
         <source>&amp;Fill:</source>
         <translation>&amp;Füllmuster:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="160"/>
+        <location filename="optionsform.cpp" line="161"/>
         <source>F&amp;ill Opacity:</source>
         <translation>&amp;Deckkraft:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="163"/>
+        <location filename="optionsform.cpp" line="164"/>
         <source>&lt;p&gt;The outline and fill are used to highlight differences using a semi-transparent version of the base color. The margin rules are painted using the base color  and indicate where changes are. Set the rule width to 0.0 to switch the rules off. If combining highlighting is checked it will try to merge the highlighting of adjacent text differences.</source>
         <translation>&lt;p&gt;Rahmen und Füllmuster werden verwendet um Unterschiede hervorzuheben. Sie werden in der halbtransparenten Basisfarbe gezeichnet. Die Randmarker zeigen an, wo sich Unterschiede befinden. Sie werden in der Basisfarbe gezeichnet. Um die Randmarker zu deaktivieren kann der Wert auf 0.0 gestellt werden. Wenn &quot;Hervorhebungen beim Textvergleich zusammenschließen&quot; gewählt ist wird versucht nah zusammenliegende Textunterschiede als Einheit hervorzuheben.</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="171"/>
+        <location filename="optionsform.cpp" line="172"/>
         <source>&amp;Highlighting</source>
         <translation>&amp;Hervorhebung</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="174"/>
+        <location filename="optionsform.cpp" line="175"/>
         <source>&amp;Square Size:</source>
         <translation>&amp;Genauigkeit:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="175"/>
+        <location filename="optionsform.cpp" line="176"/>
         <source>C&amp;ache Size:</source>
         <translation>C&amp;ache-Größe:</translation>
     </message>
     <message>
-        <location filename="optionsform.cpp" line="178"/>
+        <location filename="optionsform.cpp" line="179"/>
         <source>&amp;Performance</source>
         <translation>&amp;Leistungsoptimierung</translation>
     </message>
@@ -1004,12 +1024,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="status.cpp" line="207"/>
+        <location filename="status.cpp" line="208"/>
         <source>Error writing XML result file:%1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="main.cpp" line="144"/>
+        <location filename="main.cpp" line="149"/>
         <source>unrecognized argument &apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1032,62 +1052,70 @@
 <context>
     <name>SaveForm</name>
     <message>
-        <location filename="saveform.cpp" line="36"/>
-        <source>DiffPDF — Save As</source>
-        <translation>DiffPDF — Speichern unter</translation>
+        <source>ConfrontaPDF — Save As</source>
+        <translation type="obsolete">ConfrontaPDF — Speichern unter</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="42"/>
+        <location filename="saveform.cpp" line="37"/>
+        <source>%1 — Save As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="saveform.cpp" line="43"/>
         <source>Pairs</source>
         <translation>Seiten</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="43"/>
+        <location filename="saveform.cpp" line="44"/>
         <source>Current &amp;Page Pair</source>
         <translation>Aktuelle &amp;Seite</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="44"/>
+        <location filename="saveform.cpp" line="45"/>
         <source>&amp;All Page Pairs</source>
         <translation>&amp;Alle Seiten</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="49"/>
+        <location filename="saveform.cpp" line="50"/>
         <source>Pages</source>
         <translation>Inhalt</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="50"/>
+        <location filename="saveform.cpp" line="51"/>
         <source>File #&amp;1&apos;s Pages</source>
         <translation>nur links (Datei #&amp;1)</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="51"/>
+        <location filename="saveform.cpp" line="52"/>
         <source>File #&amp;2&apos;s Pages</source>
         <translation>nur rechts (Datei #&amp;2)</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="52"/>
+        <location filename="saveform.cpp" line="53"/>
         <source>&amp;Both Files&apos; Pages</source>
         <translation>&amp;beide Seiten nebeneinander</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="59"/>
+        <location filename="saveform.cpp" line="60"/>
         <source>&amp;Filename:</source>
         <translation>&amp;Dateiname:</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="63"/>
+        <location filename="saveform.cpp" line="64"/>
         <source>B&amp;rowse...</source>
         <translation>&amp;Durchsuchen...</translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="119"/>
-        <source>DiffPDF — Browse</source>
-        <translation>DiffPDF — Durchsuchen</translation>
+        <location filename="saveform.cpp" line="120"/>
+        <source>%1 — Browse</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="saveform.cpp" line="120"/>
+        <source>ConfrontaPDF — Browse</source>
+        <translation type="obsolete">ConfrontaPDF — Durchsuchen</translation>
+    </message>
+    <message>
+        <location filename="saveform.cpp" line="121"/>
         <source>PDF files (*.pdf);;Image files (%1)</source>
         <translation>PDF Dateien (*.pdf);;Bilddateien (%1)</translation>
     </message>

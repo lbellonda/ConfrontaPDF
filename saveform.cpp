@@ -11,6 +11,7 @@
 */
 
 #include "saveform.hpp"
+#include "aboutform.hpp"
 #include <QDialogButtonBox>
 #include <QFileDialog>
 #include <QFormLayout>
@@ -33,7 +34,7 @@ SaveForm::SaveForm(const QString &path, QString *filename, bool *saveAll,
     createConnections();
 
     updateUi();
-    setWindowTitle(tr("DiffPDF — Save As"));
+    setWindowTitle(tr("%1 — Save As").arg(AboutForm::ProgramName));
 }
 
 
@@ -116,7 +117,7 @@ void SaveForm::chooseFile()
     foreach (const QByteArray &format, formats)
         suffixes << "*." + QString(format.toLower());
     QString filename = QFileDialog::getSaveFileName(this,
-            tr("DiffPDF — Browse"), m_path,
+            tr("%1 — Browse").arg(AboutForm::ProgramName), m_path,
             tr("PDF files (*.pdf);;Image files (%1)")
             .arg(suffixes.join(" ")));
     if (!filename.isEmpty()) {
