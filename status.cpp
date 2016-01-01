@@ -164,6 +164,7 @@ int Status::returnOp(const EReturnType retType, StartupParameters *params, Batch
             stream.writeAttribute("startPage1", QString::number(params->startPage1()));
             stream.writeAttribute("startPage2", QString::number(params->startPage2()));
             stream.writeAttribute("pageDiffCount", QString::number(_pagesNotEqualCount));
+            stream.writeAttribute("settings", params->settingsFile());
             stream.writeEndElement(); // args
             //-----
             stream.writeStartElement("info");

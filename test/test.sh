@@ -2,6 +2,7 @@
 #test for diffpdf, start in project dir
 export diffcmd=./build/confrontapdfc
 export datadir=./data
+export testdir=./test
 
 #equals short code (default)
 var=`$diffcmd -b $datadir/doca1pag.pdf $datadir/doca1pag_dup.pdf`
@@ -152,6 +153,17 @@ if [ "$var" != "1" ]; then
  echo "****failed 12.3: $var"
  exit 1
 fi
-echo Result is in $tr
+echo Result 12.3 is in $tr
+
+
+#do a test run
+tf=`mktemp`
+tr=`mktemp`
+var=`$diffcmd -b --pdfdiff=$tf $datadir/doca1pag.pdf $datadir/docb1pag.pdf --xmlResult=$tr --key=xxx --settings=$testdir/test.ini`
+echo Result 13 is in $tr
+if [ "$var" != "0" ]; then
+ echo "****failed 13: $var"
+ exit 1
+fi
 
 exit 0
