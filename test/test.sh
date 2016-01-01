@@ -156,7 +156,7 @@ fi
 echo Result 12.3 is in $tr
 
 
-#do a test run
+#do a test run with settings
 tf=`mktemp`
 tr=`mktemp`
 var=`$diffcmd -b --pdfdiff=$tf $datadir/doca1pag.pdf $datadir/docb1pag.pdf --xmlResult=$tr --key=xxx --settings=$testdir/test.ini`
