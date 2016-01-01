@@ -11,11 +11,11 @@ http://www.qtrac.eu/diffpdf-foss.html. Mark's commercial versions are available 
 http://www.qtrac.eu/diffpdf.html
 
 Command line:
-ComparaPDF can compare two PDF files, writing the result to standard output,
+ConfrontaPDF can compare two PDF files, writing the result to standard output,
 an XML file and generate a PDF document with the differences between the
 input documents. It is scriptable, and do not open windows or wait for
 user input during the batch operation making it suitable for automated tests.
-ComparaPDFc is a version of ComparaPDF that always runs in command line mode.
+ConfrontaPDFc is a version of ConfrontaPDF that always runs in command line mode.
 
 GUI:
 By default the comparison is of the words on each pair of pages, but
@@ -30,17 +30,16 @@ specifying two page ranges, 1-12 for the first and 1-3, 5-13 for the
 second. This will make ConfrontaPDF compare pages in the pairs (1, 1), (2,
 2), (3, 3), (4, 5), (5, 6), and so on, to (12, 13).
 
-A couple of example PDF files are provided online so that you can try it
-out. PDF files can be loaded from the GUI (by pressing the File #1 and
-File #2 buttons), or by specifying them on the command line. More
-information is available in the program's tooltips and About box.
+A couple of example PDF files are in the data folder of the sources.
+
+More information is available in the program's tooltips and About box.
 
 
 Windows Users
 =============
-Use ComparaPDFc for command line only operations.
+Use ConfrontaPDFc for command line only operations.
 
-Compiling and Installing ConfrontaPDF (Mac-specific notes are at the end.)
+Compiling and Installing ConfrontaPDF
 =====================================
 
 Prerequisites:
@@ -52,29 +51,30 @@ Qt4 requires the Poppler's Qt 4 headers.
 Qt5 requires the Poppler's Qt 5 headers.
 
 Linux and BSD users should be able to get compiling from sources.
-Mac OS X users can get a compiler by installing Xcode; you'll need to
-get Qt and Poppler separately.
-
+For other systems you'll need to get Qt and Poppler separately.
 
 Download the sources from site: git clone https://github.com/lbellonda/ConfrontaPDF
 or download a zip.
-2. Change directory to ComparaPDF
-    $ cd ComparaPDF
-3. Run lrelease;
-    $ lrelease comparapdf.pro
-4. Run qmake on comparapdf;
-    $ qmake comparapdf.pro
-5. Run make
+1. Change directory to ConfrontaPDF
+    $ cd ConfrontaPDF
+2. Run lrelease;
+    $ lrelease confrontapdf.pro
+3. Run qmake on confrontapdf;
+    $ qmake confrontapdf.pro
+4. Run make
     $ make
-6. Run qmake on comparapdfc
-    $ qmake comparapdfc.pro
-7. Run make
+5. Run qmake on confrontapdfc
+    $ qmake confrontapdfc.pro
+6. Run make
     $ make
-6. Copy or soft-link the comparapdf and comparapdfc executable to somewhere on your PATH
-7. Only the executable is needed; all the files that were unpacked or
+7. Copy or soft-link the confrontapdf and confrontapdfc executable to somewhere on your PATH
+8. Only the executables are needed; all the files that were unpacked or
    generated can be safely deleted.
 Windows users can find an installer script to customize in the install folder.
 
+Two helper files are provided for Windows and Unix-like systems:
+- compile.sh
+- compile.cmd
 
 Running ConfrontaPDF
 ====================
@@ -97,21 +97,3 @@ option), any later version. This program is distributed in the hope that
 it will be useful, but WITHOUT ANY WARRANTY; without even the implied
 warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License (in file gpl-2.0.txt) for more details.
-
-
-Building on Mac OS X
-====================
-
-Here's how to build it:
-
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
-$ brew install qt
-$ brew install poppler --with-qt4
-
-# Dirs must be writeable because macdeployqt modifies copied files
-$ chmod -R u+w /usr/local/Cellar/qt/
-$ chmod -R u+w /usr/local/Cellar/poppler/
-
-follow the compile steps described above up to the lrelease phase
-$ qmake -spec macx-g++
-$ make
