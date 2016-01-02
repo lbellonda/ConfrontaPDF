@@ -16,6 +16,33 @@ reformatted, or a font changed). It is also possible to compare
 particular pages and having the result written in an XML file.
 It is possible to generate a PDF document with the differences between the
 given documents.
+.br
+The result is printed on standard output.
+.br
+* 0 means that the PDF are identical
+* any other code means a difference or an error
+.br
+Output can be:
+.br
+-Code only (default)
+.br
+ sample:
+  > confrontapdfc -b a.pdf b.pdf
+  > 0
+.br
+-Code and description using --outType=1 switch
+sample:
+ > confrontapdfc -b --outType=1 a.pdf b.pdf
+ > 0|no differences
+.br
+An XML file with a detailed result can be written using --xmlResult=path
+.br
+sample:
+.br
+> confrontapdfc -b --xmlResult=result.xml a.pdf b.pdf
+> 0
+.br
+
 .PP
 .SH OPTIONS
 In batch mode the parameters are:

@@ -107,6 +107,6 @@ AboutForm::AboutForm(QWidget *parent) : QDialog(parent)
     QHBoxLayout *layout = new QHBoxLayout;
     layout->addWidget(tabWidget);
     setLayout(layout);
-    resize(520, 480);
+    resize(520, 486);
     setWindowTitle(tr("%1 — About").arg(AboutForm::ProgramName));
 }

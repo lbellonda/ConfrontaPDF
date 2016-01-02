@@ -16,6 +16,28 @@ an XML file and generate a PDF document with the differences between the
 input documents. It is scriptable, and do not open windows or wait for
 user input during the batch operation making it suitable for automated tests.
 ConfrontaPDFc is a version of ConfrontaPDF that always runs in command line mode.
+The result is printed on standard output.
+
+-0 means that the PDF are identical
+- any other code means a difference or an error
+
+Output can be:
+-Code only (default)
+
+ sample:
+  > confrontapdfc -b a.pdf b.pdf
+  > 0
+
+-Code and description using --outType=1 switch
+sample:
+ > confrontapdfc -b --outType=1 a.pdf b.pdf
+ > 0|no differences
+
+An XML file with a detailed result can be written using --xmlResult=path
+sample:
+> confrontapdfc -b --xmlResult=result.xml a.pdf b.pdf
+> 0
+
 
 GUI:
 By default the comparison is of the words on each pair of pages, but
