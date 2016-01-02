@@ -1,6 +1,6 @@
 #!/bin/sh
 #test for diffpdf, start in project dir
-export diffcmd=./build/confrontapdf
+export diffcmd=./build/confrontapdfc
 export datadir=./data
 export testdir=./test
 
