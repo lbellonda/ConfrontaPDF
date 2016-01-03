@@ -234,6 +234,7 @@ private:
     StartupParameters *_startupParameters;
     Status *_status;
     int currentCompareIndex;
+    int currentShowCompareIndex;
 };
 
 #endif // MAINWINDOW_HPP

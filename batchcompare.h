@@ -151,6 +151,7 @@ public:
     QString filename2;
     int showHighlight;
     QString pages1LineEdit, pages2LineEdit;
+    // -1 for highlight, any other value: composition
     QPainter::CompositionMode compositionMode;
     int squareSize;
     double ruleWidth;

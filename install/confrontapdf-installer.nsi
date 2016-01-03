@@ -8,7 +8,7 @@
 Name "ConfrontaPDF"
 
 
-OutFile "ConfrontaPFP-${Version}.exe"
+OutFile "ConfrontaPDF-${Version}.exe"
 
 InstallDir $PROGRAMFILES\ConfrontaPDF
 
@@ -35,10 +35,10 @@ Section ""
         File "${PopplerDir}\openjpeg.dll"
         File "${SourceDir}\README"
         File "${SourceDir}\gpl-2.0.txt"
-        File "${SourceDir}\diffpdf_cz.qm"
-        File "${SourceDir}\diffpdf_de.qm"
-        File "${SourceDir}\diffpdf_es.qm"
-        File "${SourceDir}\diffpdf_fr.qm"
+        File "${SourceDir}\confrontapdf_cz.qm"
+        File "${SourceDir}\confrontapdf_de.qm"
+        File "${SourceDir}\confrontapdf_es.qm"
+        File "${SourceDir}\confrontapdf_fr.qm"
         File "${QtDir}\bin\libwinpthread-1.dll"
         File "${QtDir}\bin\libstdc++-6.dll"
         File "${QtDir}\bin\libgcc_s_dw2-1.dll"

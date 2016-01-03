@@ -61,6 +61,7 @@ MainWindow::MainWindow(const Debug debug,
 {
     _startupParameters = startupParameters ;
     currentCompareIndex = comparisonMode ;
+    currentShowCompareIndex = 0 ;
     _status = status ;
     currentPath = QDir::homePath();
     QSettings settings;
@@ -671,6 +672,7 @@ void MainWindow::updateUi()
         page1Label->setCursor(Qt::ArrowCursor);
         page2Label->setCursor(Qt::ArrowCursor);
     }
+    currentShowCompareIndex = showComboBox->currentIndex();
 }
 
 
@@ -793,6 +795,7 @@ void MainWindow::nextPages()
 
 void MainWindow::updateViews(int index)
 {
+    currentShowCompareIndex = showComboBox->currentIndex();
     if (index == 0) {
         page1Label->clear();
         page2Label->clear();
@@ -840,7 +843,7 @@ const QPair<QString, QString> MainWindow::cacheKeys(const int index,
 {
     int comparisonMode;
     if (currentCompareIndex == CompareAppearance)
-        comparisonMode = currentCompareIndex;
+        comparisonMode = currentShowCompareIndex;
     else
         comparisonMode = -currentCompareIndex;
     QString zoning;
@@ -927,16 +930,11 @@ const QPair<QPixmap, QPixmap> MainWindow::populatePixmaps(
             QPainter painter(&composed);
             painter.setCompositionMode(QPainter::CompositionMode_Source);
             painter.fillRect(composed.rect(), Qt::transparent);
-            painter.setCompositionMode(
-                    QPainter::CompositionMode_SourceOver);
+            painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
             painter.drawImage(0, 0, image1);
-            painter.setCompositionMode(
-                    static_cast<QPainter::CompositionMode>(
-                        showComboBox->itemData(
-                            showComboBox->currentIndex()).toInt()));
+            painter.setCompositionMode(static_cast<QPainter::CompositionMode>(showComboBox->itemData(showComboBox->currentIndex()).toInt()));
             painter.drawImage(0, 0, image2);
-            painter.setCompositionMode(
-                    QPainter::CompositionMode_DestinationOver);
+            painter.setCompositionMode(QPainter::CompositionMode_DestinationOver);
             painter.fillRect(composed.rect(), Qt::white);
             painter.end();
             pixmap2 = QPixmap::fromImage(composed);

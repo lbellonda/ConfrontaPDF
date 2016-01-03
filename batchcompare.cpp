@@ -126,7 +126,6 @@ void BatchCompare::initValues()
     pen.setColor(Qt::red);
     brush.setColor(pen.color());
     brush.setStyle(Qt::SolidPattern);
-    compositionMode = static_cast<QPainter::CompositionMode>(-1) ;
 
     marginsGroupBoxChecked = false;
     zoningGroupBoxChecked = false ;
@@ -155,11 +154,18 @@ void BatchCompare::initValues()
 const QPair<QString, QString> BatchCompare::cacheKeys(const int index,
         const PagePair &pair) const
 {
-    int comparisonMode;
-    if (currentCompareIndex == CompareAppearance)
-        comparisonMode = currentCompareIndex;
-    else
-        comparisonMode = -currentCompareIndex;
+    int comparisonMode1;
+    int comparisonMode2;
+    // TODO: refactor this key, it is very bad.
+    if (currentCompareIndex == CompareAppearance) {
+        // this key will be always positive, even if the value is -1
+        comparisonMode1 = 1;
+        comparisonMode2 = static_cast<int>(compositionMode);
+    } else {
+        // this will be always negative, given that App is 0.
+        comparisonMode1 = 0 ;
+        comparisonMode2 = currentCompareIndex;
+    }
     QString zoning;
     if (zoningGroupBoxChecked)
         zoning = QString("%1:%2:%3").arg(columnsSpinBoxValue)
@@ -171,8 +177,8 @@ const QPair<QString, QString> BatchCompare::cacheKeys(const int index,
                 .arg(bottomMarginSpinBoxValue)
                 .arg(leftMarginSpinBoxValue)
                 .arg(rightMarginSpinBoxValue);
-    const QString key = QString("%1:%2:%3:%4:%5").arg(index)
-            .arg(zoomSpinBoxValue).arg(comparisonMode).arg(zoning)
+    const QString key = QString("%1:%2:%3:%4:%5:%6").arg(index)
+            .arg(zoomSpinBoxValue).arg(comparisonMode1).arg(comparisonMode2).arg(zoning)
             .arg(margins);
     const QString key1 = QString("1:%1:%2:%3").arg(key).arg(pair.left)
             .arg(filename1);
@@ -336,13 +342,6 @@ void BatchCompare::paintOnImage(const QPainterPath &path, QImage *image)
     }
     painter.end();
 }
-
-/*
-QString BatchCompare::finalFileName(const QString &filename)
-{
-    return filename;
-}
-*/
 
 PdfDocument BatchCompare::getPdf(const QString &filename)
 {
@@ -638,7 +637,7 @@ const QPair<QPixmap, QPixmap> BatchCompare::populatePixmaps(
         QImage image1 = page1->renderToImage(DPI, DPI);
         QImage image2 = page2->renderToImage(DPI, DPI);
 
-        if (compareText || (-1 == static_cast<int>(compositionMode)) ) {
+        if (compareText || (-1 == static_cast<int>(compositionMode) ) ) {
             QPainterPath highlighted1;
             QPainterPath highlighted2;
             if (hasVisualDifference || !compareText)
@@ -667,13 +666,11 @@ const QPair<QPixmap, QPixmap> BatchCompare::populatePixmaps(
             QPainter painter(&composed);
             painter.setCompositionMode(QPainter::CompositionMode_Source);
             painter.fillRect(composed.rect(), Qt::transparent);
-            painter.setCompositionMode(
-                    QPainter::CompositionMode_SourceOver);
+            painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
             painter.drawImage(0, 0, image1);
             painter.setCompositionMode(compositionMode);
             painter.drawImage(0, 0, image2);
-            painter.setCompositionMode(
-                    QPainter::CompositionMode_DestinationOver);
+            painter.setCompositionMode(QPainter::CompositionMode_DestinationOver);
             painter.fillRect(composed.rect(), Qt::white);
             painter.end();
             pixmap2 = QPixmap::fromImage(composed);
