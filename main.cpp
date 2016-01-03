@@ -151,7 +151,7 @@ int main(int argc, char *argv[])
         }
     }
     if( startupParameters.isBatch() && !seenCompareType ) {
-        startupParameters.setComparisonMode(CompareAppearance);
+        comparisonMode = CompareAppearance;
     }
     startupParameters.setComparisonMode(comparisonMode);
     if( status.isError() ) {
