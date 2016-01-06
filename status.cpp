@@ -245,6 +245,17 @@ void Status::writeInfo(QXmlStreamWriter &writer, DocInfo *info)
         writer.writeEndElement();
     }
     writer.writeEndElement();
+    writer.writeStartElement("fonts");
+    foreach( LFontInfo *fi, info->fonts ) {
+        writer.writeStartElement("font");
+        writer.writeAttribute("name", fi->name);
+        writer.writeAttribute("type", fi->typeName);
+        writer.writeAttribute("embedded", fi->embedded?"true":"false");
+        writer.writeAttribute("subset", fi->subset?"true":"false");
+        writer.writeEndElement();
+    }
+
+    writer.writeEndElement();
 }
 
 //-----

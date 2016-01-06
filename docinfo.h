@@ -18,6 +18,16 @@
 #include <QList>
 #include <QPair>
 
+
+class LFontInfo {
+public:
+    QString name;
+    bool subset;
+    bool embedded;
+    QString typeName;
+    LFontInfo();
+};
+
 class DocInfo
 {
 public:
@@ -27,8 +37,10 @@ public:
     QString modDate;
     QString pageSize;
     QList< QPair< QString, QString> > infos;
+    QList< LFontInfo *> fonts;
 
     DocInfo();
+    ~DocInfo();
 };
 
 #endif // DOCINFO_H

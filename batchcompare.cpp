@@ -705,6 +705,17 @@ DocInfo *BatchCompare::docInfo(PdfDocument pdf, const QString &fileName)
                   .arg(qRound(size.width() * PointToMM))
                   .arg(qRound(size.height() * PointToMM));
     }
+    // get fonts info
+    QList<Poppler::FontInfo> fonts = pdf->fonts();
+    foreach(Poppler::FontInfo fi, fonts ) {
+        LFontInfo *fil = new LFontInfo();
+        fil->name = fi.name();
+        fil->embedded = fi.isEmbedded();
+        fil->subset = fi.isSubset();
+        fil->typeName = fi.typeName();
+        info->fonts.append(fil);
+    }
+
     return info;
 }
 

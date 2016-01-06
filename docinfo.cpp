@@ -13,6 +13,21 @@
 
 #include "docinfo.h"
 
+LFontInfo::LFontInfo()
+{
+    embedded = false;
+    subset = false;
+}
+
 DocInfo::DocInfo()
 {
+}
+
+DocInfo::~DocInfo()
+{
+    while( fonts.size() > 0 ) {
+        LFontInfo *fi = fonts.first();
+        fonts.removeFirst();
+        delete fi;
+    }
 }
