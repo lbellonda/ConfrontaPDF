@@ -21,6 +21,8 @@ LFontInfo::LFontInfo()
 
 DocInfo::DocInfo()
 {
+    pdfVersionMajor = -1;
+    pdfVersionMinor = -1;
 }
 
 DocInfo::~DocInfo()

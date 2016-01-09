@@ -31,6 +31,8 @@ public:
 class DocInfo
 {
 public:
+    int pdfVersionMajor;
+    int pdfVersionMinor;
     QString fileName;
     int pageCount;
     QString creationDate;

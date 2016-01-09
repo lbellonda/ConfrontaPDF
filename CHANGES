@@ -1,6 +1,13 @@
-Project fork to ConfrontaPdf
+1.1.0
+
+- Used fonts can be optionally compared for name and attributes.
+
+- Listed fonts in the document info.
+
 1.0.0
 - Added command line batch processing.
+
+Project fork to ConfrontaPdf
 
 
 DiffPDF history

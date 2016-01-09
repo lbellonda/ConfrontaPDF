@@ -176,5 +176,31 @@ if [ "$var" != "1" ]; then
  exit 1
 fi
 
+#compare fonts
+tr=`mktemp`
+var=`$diffcmd -b --pdfdiff=$tf $datadir/doca1pagi1.pdf $datadir/doca1pagi2.pdf --xmlResult=$tr --key=xxx`
+echo Result 14.0 is in $tr
+if [ "$var" != "0" ]; then
+ echo "****failed 14.0: $var"
+ exit 1
+fi
+
+#compare fonts
+tr=`mktemp`
+var=`$diffcmd --outType=0 -b --pdfdiff=$tf $datadir/doca1pagi1.pdf $datadir/doca1pagi2.pdf --xmlResult=$tr --key=xxx --compareFonts`
+echo Result 14.1 is in $tr
+if [ "$var" != "6" ]; then
+ echo "****failed 14.1: $var"
+ exit 1
+fi
+
+tr=`mktemp`
+var=`$diffcmd --outType=0 -b --pdfdiff=$tf $datadir/doca1pagi2.pdf $datadir/doca1pagi1.pdf --xmlResult=$tr --key=xxx --compareFonts`
+echo Result 14.2 is in $tr
+if [ "$var" != "6" ]; then
+ echo "****failed 14.2: $var"
+ exit 1
+fi
+
 echo "Test completed successfully"
 exit 0

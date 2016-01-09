@@ -47,6 +47,7 @@ bool Status::isErrorComparing()
         return false;
     case ErrorDocDiffer:
     case ErrorPagesDiffer:
+    case ErrorFontsDiffer:
         return true ;
     }
 }
@@ -56,19 +57,19 @@ EError Status::status() const
     return _status;
 }
 
-void Status::setStatus(const EError &status)
+void Status::setStatus(const EError status)
 {
     _status = status;
 }
 
-void Status::setStatusWithDescription(const EError &status, const QString newDescription)
+void Status::setStatusWithDescription(const EError status, const QString newDescription)
 {
     if( ENoErrors == _status ) {
         setStatusWithDescriptionUncond(status, newDescription);
     }
 }
 
-void Status::setStatusWithDescriptionUncond(const EError &status, const QString newDescription)
+void Status::setStatusWithDescriptionUncond(const EError status, const QString newDescription)
 {
     _status = status ;
     _description = newDescription ;
@@ -165,6 +166,7 @@ int Status::returnOp(const EReturnType retType, StartupParameters *params, Batch
             stream.writeAttribute("startPage2", QString::number(params->startPage2()));
             stream.writeAttribute("pageDiffCount", QString::number(_pagesNotEqualCount));
             stream.writeAttribute("settings", params->settingsFile());
+            stream.writeAttribute("compareFonts", params->isCompareFonts()?"true":"false");
             stream.writeEndElement(); // args
             //-----
             stream.writeStartElement("info");
@@ -235,6 +237,7 @@ void Status::writeInfo(QXmlStreamWriter &writer, DocInfo *info)
     writer.writeAttribute("creationDate", info->creationDate);
     writer.writeAttribute("modDate", info->modDate);
     writer.writeAttribute("pageSize", info->pageSize);
+    writer.writeAttribute("PDFVersion", QString("%1.%2").arg(QString::number(info->pdfVersionMajor)).arg(QString::number(info->pdfVersionMinor)));
     writer.writeStartElement("items");
     int size = info->infos.size();
     for( int i = 0 ; i < size ; i ++ ) {

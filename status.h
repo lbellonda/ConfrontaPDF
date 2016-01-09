@@ -35,6 +35,7 @@ enum EError {
     ErrorInitialPage=3,
     ErrorFinalPage=4,
     ErrorSameFile=5,
+    ErrorFontsDiffer=6
 };
 
 enum EReturnType;
@@ -57,9 +58,9 @@ public:
     void setParamError(const bool error, const QString &paramName);
 
     EError status() const;
-    void setStatus(const EError &status);
-    void setStatusWithDescription(const EError &status, const QString newDescription);
-    void setStatusWithDescriptionUncond(const EError &status, const QString newDescription);
+    void setStatus(const EError status);
+    void setStatusWithDescription(const EError status, const QString newDescription);
+    void setStatusWithDescriptionUncond(const EError status, const QString newDescription);
 
     bool isError();
     bool isErrorComparing();

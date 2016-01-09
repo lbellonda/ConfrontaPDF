@@ -122,6 +122,10 @@ private:
     void writeParam(QXmlStreamWriter &writer, const QString &name, const QString &value);
     void writeParam(QXmlStreamWriter & writer, const QString &name, const QVariant &value);
 
+    QString makeFontKey(LFontInfo *l);
+    QString makeFontInfoString(LFontInfo *l);
+    bool compareFonts(DocInfo *doc1, DocInfo *doc2);
+
 
     QBrush brush;
     QPen pen;

@@ -346,21 +346,19 @@ void BatchCompare::paintOnImage(const QPainterPath &path, QImage *image)
 PdfDocument BatchCompare::getPdf(const QString &filename)
 {
     PdfDocument pdf(Poppler::Document::load(filename));
-    if(!_startupParameters->isBatch()) {
-        if (!pdf) {
-            _status->setStatusWithDescription(ErrorUnableToLoadFile,
-                                              tr("Cannot load '%1'.").arg(filename));
-            _notifier->messageBox(tr("Cannot load '%1'.").arg(filename));
-        } else if (pdf->isLocked()) {
-            _status->setStatusWithDescription(ErrorUnableToLoadFile,
-                                              tr("Cannot read a locked PDF ('%1').").arg(filename));
-            _notifier->messageBox(tr("Cannot read a locked PDF ('%1').").arg(filename));
-    #if QT_VERSION >= 0x040600
-            pdf.clear();
-    #else
-            pdf.reset();
-    #endif
-        }
+    if (!pdf) {
+        _status->setStatusWithDescription(ErrorUnableToLoadFile,
+                                          tr("Cannot load '%1'.").arg(filename));
+        _notifier->messageBox(tr("Cannot load '%1'.").arg(filename));
+    } else if (pdf->isLocked()) {
+        _status->setStatusWithDescription(ErrorUnableToLoadFile,
+                                          tr("Cannot read a locked PDF ('%1').").arg(filename));
+        _notifier->messageBox(tr("Cannot read a locked PDF ('%1').").arg(filename));
+#if QT_VERSION >= 0x040600
+        pdf.clear();
+#else
+        pdf.reset();
+#endif
     }
     return pdf;
 }
@@ -437,6 +435,9 @@ void BatchCompare::batchOperation()
     comparePagesBatch( _status, results,
                        _startupParameters->file1(), pdf1,
                       _startupParameters->file2(), pdf2);
+    if(!_status->isError() && _startupParameters->isCompareFonts() ) {
+        compareFonts(_status->doc1Info(), _status->doc2Info());
+    }
     if( _status->isError() && _status->isErrorComparing() ) {
         _status->setPagesNotEqualCount(results.count());
         if( _startupParameters->enablePDFDiff() ) {
@@ -705,6 +706,7 @@ DocInfo *BatchCompare::docInfo(PdfDocument pdf, const QString &fileName)
                   .arg(qRound(size.width() * PointToMM))
                   .arg(qRound(size.height() * PointToMM));
     }
+    pdf->getPdfVersion(&info->pdfVersionMajor, &info->pdfVersionMinor);
     // get fonts info
     QList<Poppler::FontInfo> fonts = pdf->fonts();
     foreach(Poppler::FontInfo fi, fonts ) {
@@ -715,7 +717,6 @@ DocInfo *BatchCompare::docInfo(PdfDocument pdf, const QString &fileName)
         fil->typeName = fi.typeName();
         info->fonts.append(fil);
     }
-
     return info;
 }
 
@@ -789,3 +790,40 @@ void BatchCompare::writeParameters(QXmlStreamWriter & writer)
     writeParam(writer, "Opacity", QString::number(opacity) );
 }
 
+QString BatchCompare::makeFontKey(LFontInfo *l)
+{
+    QString key = QString("%1:%2:%3:%4").arg(l->name).arg(l->typeName).arg(l->embedded).arg(l->subset);
+    return key;
+}
+
+QString BatchCompare::makeFontInfoString(LFontInfo *l)
+{
+    QString key = QString("name:%1, type:%2, embedded:%3, subset:%4").arg(l->name).arg(l->typeName).arg(l->embedded).arg(l->subset);
+    return key;
+}
+
+bool BatchCompare::compareFonts(DocInfo *doc1, DocInfo *doc2)
+{
+    bool error = false ;
+    QMultiHash<QString,LFontInfo*> fontsDoc2;
+    foreach( LFontInfo* f2, doc2->fonts ) {
+        fontsDoc2.insertMulti(makeFontKey(f2), f2);
+    }
+
+    foreach( LFontInfo* f1, doc1->fonts ) {
+        QString keyFont1 = makeFontKey(f1);
+        if( fontsDoc2.contains(keyFont1)) {
+            fontsDoc2.remove(keyFont1, fontsDoc2.values(keyFont1).first());
+        } else {
+            _status->setStatusWithDescription(ErrorFontsDiffer, QString("Doc 2 is missing font:%1").arg(makeFontInfoString(f1)));
+            error = true ;
+        }
+    }
+    // check for
+    if( fontsDoc2.keys().size()>0 ) {
+        LFontInfo *missing = fontsDoc2.values().first();
+        _status->setStatusWithDescription(ErrorFontsDiffer, QString("Doc 1 is missing font:%1").arg(makeFontInfoString(missing)));
+        error = true ;
+    }
+    return !error;
+}

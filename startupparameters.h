@@ -42,6 +42,7 @@ class StartupParameters
     bool _useXmlResult;
     QString _key;
     QString _settingsFile;
+    bool _compareFonts;
 public:
     StartupParameters();
     ~StartupParameters();
@@ -83,6 +84,7 @@ public:
     void setStartTime(const QDateTime &startTime);
     QString settingsFile() const;
     void setSettingsFile(const QString &settingsFile);
+    bool isCompareFonts();
 };
 
 #endif // STARTUPPARAMETERS_H

@@ -104,6 +104,7 @@ int main(int argc, char *argv[])
                 "--xmlResult=path generates file with the comparison result in XML \n"
                 "--key=aKey a key to be recorded in the result file\n"
                 "--settings=file settings to override default parameters\n"
+                "--compareFonts compare the fonts\n"
                 "\nRun the program without the --help option and click "
                 "About to see copyright and license details\n"
                 ;
