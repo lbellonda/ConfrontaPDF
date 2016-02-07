@@ -1,5 +1,5 @@
 rem test for diffpdf, start in test dir
-set diffcmd=..\.\build\confrontapdfc
+set diffcmd=..\.\build\confrontapdfc.exe
 set datadir=..\.\data
 set testdir=..\.\test
 
