@@ -2,7 +2,7 @@
 !define BuildDir "xxxxxxxx"
 !define SourceDir "xxxxxxxxxxxxxxxxx"
 !define PopplerDir "xxxxxxxxxxxxxxxx"
-!define Version "1.0.0"
+!define Version "1.1.0"
 !define QtDir "xxxxxxxxxxxxxxx"
 
 Name "ConfrontaPDF"

@@ -19,7 +19,7 @@
 #include <QTabWidget>
 #include <QTextBrowser>
 
-const QString AboutForm::Version("1.0.1-SNAPSHOT");
+const QString AboutForm::Version("1.1");
 #ifdef COMPARA_IS_CONSOLE
 const QString AboutForm::ProgramName("ConfrontaPDFc");
 #else
