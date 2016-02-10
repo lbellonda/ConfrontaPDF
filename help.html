@@ -189,6 +189,7 @@ options:
 --xmlResult=path   generates file with the comparison result in XML
 --key=aKey         a key to be recorded in the result file
 --settings=file    settings (in INI format) to override default parameters
+--compareFonts     compare the fonts
 </pre>
 
 A typical command line for automated checks is:
@@ -210,6 +211,7 @@ Return codes when invoked in batch:
 <li>3: error in the initial page specification</li>
 <li>4: error in the final page specification</li>
 <li>5: the same file has been specified as candidate and reference</li>
+<li>6: fonts differ</li>
 <li>-1: invocation parameters error</li>
 <li>-2: unexpected error</li>
 <li>-3: unable to load first PDF</li>
