@@ -10,36 +10,40 @@ The source for the last release of Mark's open source version is available from:
 http://www.qtrac.eu/diffpdf-foss.html. Mark's commercial versions are available from:
 http://www.qtrac.eu/diffpdf.html
 
-Command line:
+Command line
+------------
 ConfrontaPDF can compare two PDF files, writing the result to standard output,
 an XML file and generate a PDF document with the differences between the
-input documents. It is scriptable, and do not open windows or wait for
-user input during the batch operation making it suitable for automated tests.
+input documents. It is scriptable, and does not open windows or wait for
+user input during the batch operation, making it suitable for automated tests.
 ConfrontaPDFc is a version of ConfrontaPDF that always runs in command line mode.
-The result is printed on standard output.
+The result is printed on standard output:
 
--0 means that the PDF are identical
+- 0 means that the PDFs are identical
 - any other code means a difference or an error
 
 Output can be:
--Code only (default)
 
- sample:
-  > confrontapdfc -b a.pdf b.pdf
-  > 0
-
--Code and description using --outType=1 switch
+- Code only (default)
 sample:
- > confrontapdfc -b --outType=1 a.pdf b.pdf
- > 0|no differences
 
-An XML file with a detailed result can be written using --xmlResult=path
+      > confrontapdfc -b a.pdf b.pdf
+      > 0
+
+- Code and description using `--outType=1` switch
 sample:
-> confrontapdfc -b --xmlResult=result.xml a.pdf b.pdf
-> 0
 
+      > confrontapdfc -b --outType=1 a.pdf b.pdf
+      > 0|no differences
 
-GUI:
+- An XML file with a detailed result can be written using `--xmlResult=path`
+sample:
+
+      > confrontapdfc -b --xmlResult=result.xml a.pdf b.pdf
+      > 0
+
+GUI
+---
 By default the comparison is of the words on each pair of pages, but
 comparing character by character is also supported (e.g., for
 logographic languages). And there's also support for comparing the pages
@@ -59,7 +63,7 @@ More information is available in the program's tooltips and About box.
 
 Windows Users
 =============
-Use ConfrontaPDFc for command line only operations.
+Use `ConfrontaPDFc` for command line only operations.
 
 Compiling and Installing ConfrontaPDF
 =====================================
@@ -78,20 +82,33 @@ For other systems you'll need to get Qt and Poppler separately.
 Download the sources from site: git clone https://github.com/lbellonda/ConfrontaPDF
 or download a zip.
 1. Change directory to ConfrontaPDF
-    $ cd ConfrontaPDF
+
+        $ cd ConfrontaPDF
+
 2. Run lrelease;
-    $ lrelease confrontapdf.pro
+
+        $ lrelease confrontapdf.pro
+
 3. Run qmake on confrontapdf;
-    $ qmake confrontapdf.pro
+
+        $ qmake confrontapdf.pro
+
 4. Run make
-    $ make
+
+        $ make
+
 5. Run qmake on confrontapdfc
-    $ qmake confrontapdfc.pro
+
+        $ qmake confrontapdfc.pro
+
 6. Run make
-    $ make
+
+        $ make
+
 7. Copy or soft-link the confrontapdf and confrontapdfc executable to somewhere on your PATH
 8. Only the executables are needed; all the files that were unpacked or
    generated can be safely deleted.
+
 Windows users can find an installer script to customize in the install folder.
 
 Two helper files are provided for Windows and Unix-like systems:
