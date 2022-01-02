@@ -481,7 +481,7 @@ void BatchCompare::comparePagesBatch(
     if( _status->isError() ) {
         return ;
     }
-    QList<int> pages2 = getPageListBatch(2, pdf2,  _startupParameters->startPage1() );
+    QList<int> pages2 = getPageListBatch(2, pdf2, _startupParameters->startPage2() );
     if( _status->isError() ) {
         return ;
     }
