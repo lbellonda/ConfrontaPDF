@@ -1,5 +1,5 @@
 #!/bin/sh
-#include this file iin tests
+#include this file in tests
 export datadir=./data
 export testdir=./test
 
@@ -198,6 +198,26 @@ var=`$diffcmd --outType=0 -b --pdfdiff=$tf $datadir/doca1pagi2.pdf $datadir/doca
 echo Result 14.2 is in $tr
 if [ "$var" != "6" ]; then
  echo "****failed 14.2: $var"
+ exit 1
+fi
+
+
+#StartPage
+var=`$diffcmd -b --pages=1 --startPage1=1 --startPage2=2 $datadir/startpage1.pdf $datadir/startpage2.pdf`
+if [ "$var" != "0" ]; then
+ echo "****failed 15.1: >$var<"
+ exit 1
+fi
+
+var=`$diffcmd -b --pages=1 --startPage1=2 --startPage2=1 $datadir/startpage2.pdf $datadir/startpage1.pdf`
+if [ "$var" != "0" ]; then
+ echo "****failed 15.2: $var"
+ exit 1
+fi
+
+var=`$diffcmd -b --pages=1 --startPage1=1 --startPage2=1 $datadir/startpage2.pdf $datadir/startpage1.pdf`
+if [ "$var" != "1" ]; then
+ echo "****failed 15.3: $var"
  exit 1
 fi
 

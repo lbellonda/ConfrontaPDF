@@ -58,7 +58,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
             INCLUDEPATH += /c/poppler_lib/include/poppler/qt5
             LIBS += -Wl,-rpath -Wl,/c/poppler_lib/bin -Wl,-L/c/poppler_lib/bin
         } else {
-            exists(/usr/include/poppler/qt4) {
+            exists(/usr/include/poppler/qt5) {
                 INCLUDEPATH += /usr/include/poppler/cpp
                 INCLUDEPATH += /usr/include/poppler/qt5
             } else {
